@@ -1,0 +1,39 @@
+.container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.form-container {
+    background: #FFFEFE;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+h1 {
+    font-family: Bebas Neue;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 80px;
+    line-height: 120px;
+    text-align: center;
+    color: #000000;
+}
+
+h2 {
+    font-family: Questrial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 33px;
+    line-height: 43px;
+    color: #000000;
+}
+
+.img-container {
+    height: 100%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.img {
+    width: 100%;
+    max-height: 100vh;
+}
