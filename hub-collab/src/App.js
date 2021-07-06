@@ -1,8 +1,6 @@
-import logo from "./logo.svg";
 import "./App.css";
 import image from "./assets/image.png";
 import TextField from "./components/TextField.js";
-import PasswordField from "./components/PasswordField.js";
 import FileUploadButton from "./components/Uploadimage.js";
 
 function App() {
@@ -15,11 +13,11 @@ function App() {
           </header>
           <article className="form">
             <h2>Sign Up</h2>
-            <TextField property={"Name"}/>
+            <TextField type={"text"} property={"Name"}/>
             <br></br>
-            <TextField property={"Email"}/>
+            <TextField type={"text"} property={"Email"}/>
             <br></br>
-            <PasswordField property={"Password"}/>
+            <TextField type={"password"} property={"Password"}/>
             <br></br>
             <FileUploadButton/>
             <br></br>
