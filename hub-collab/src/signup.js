@@ -2,9 +2,10 @@ import "./signup.css";
 import TextField from "./components/TextField.js";
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import image2 from "./assets/image2.png";
+import user from "./assets/user.png";
+
 class SignUp extends Component {
-  state = { selectedFile: image2, name: 'XYZ', email: 'XYZ@gmail.com'};
+  state = { selectedFile: user, name: 'XYZ', email: 'XYZ@gmail.com'};
   fileChangeHandler = (event) => {
     this.setState({ selectedFile:  URL.createObjectURL(event.target.files[0]) });
   };
