@@ -16,7 +16,10 @@
         background-color: #5138EE;
         border: none;
     }
-    
+    .uploadButton{
+        height:60px;
+        width:200px;
+    }
     .signInButton {
         color: #1A5DDF;
     }
