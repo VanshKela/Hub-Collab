@@ -1,16 +1,17 @@
 import "./signup.css";
+import uploadButton from "./assets/uploadButton.png";
 import TextField from "./components/TextField.js";
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import user from "./assets/user.png";
 
 class SignUp extends Component {
-  state = { selectedFile: user, name: 'XYZ', email: 'XYZ@gmail.com'};
+  state = { selectedFile: user, name: "XYZ", email: "XYZ@gmail.com" };
   fileChangeHandler = (event) => {
-    this.setState({ selectedFile:  URL.createObjectURL(event.target.files[0]) });
+    this.setState({ selectedFile: URL.createObjectURL(event.target.files[0]) });
   };
   nameChangeHandler = (event) => {
-    this.setState({ name:  event.target.value });
+    this.setState({ name: event.target.value });
   };
   emailChangeHandler = (event) => {
     this.setState({ email: event.target.value });
@@ -26,22 +27,45 @@ class SignUp extends Component {
             <header>
               <h1>HubCollab</h1>
             </header>
-            <article className="form">
+            <form className="form">
               <h2>Sign Up</h2>
-              <TextField onChange={this.nameChangeHandler} type={"text"} property={"Name"} />
+              <TextField
+                onChange={this.nameChangeHandler}
+                type={"text"}
+                property={"Name"}
+              />
               <br></br>
-              <TextField onChange={this.emailChangeHandler} type={"text"} property={"Email"} />
+              <TextField
+                onChange={this.emailChangeHandler}
+                type={"text"}
+                property={"Email"}
+              />
               <br></br>
-              <TextField onChange={null} type={"password"} property={"Password"} />
+              <TextField
+                onChange={null}
+                type={"password"}
+                property={"Password"}
+              />
               <br></br>
               <div>
                 <h3> Upload Profile Picture </h3>
-                <React.Fragment>
-                  <input type="file" onChange={this.fileChangeHandler} accept="image/*"/>
-                </React.Fragment>
+
+                <input
+                id="inputImage"
+              
+                  type="file"
+                  onChange={this.fileChangeHandler}
+                  accept="image/*"
+                  hidden
+                />
+                <label htmlFor="inputImage"><img src={uploadButton} class="uploadButton"></img></label>
               </div>
               <br></br>
-              <button type="button" class="signUpButton" onClick={this.uploadHandler}>
+              <button
+                type="button"
+                class="signUpButton"
+                onClick={this.uploadHandler}
+              >
                 SIGN UP
               </button>
               <br></br>
@@ -51,7 +75,7 @@ class SignUp extends Component {
                   <Link to="/">SIGN IN</Link>
                 </span>
               </p>
-            </article>
+            </form>
           </div>
           <div className="img-container">
             <img className="small-image" src={this.state.selectedFile}></img>
