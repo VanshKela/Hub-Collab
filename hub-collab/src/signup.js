@@ -3,8 +3,10 @@ import image from "./assets/image.png";
 import TextField from "./components/TextField.js";
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import user from "./assets/user.png";
+
 class SignUp extends Component {
-  state = { selectedFile: null };
+  state = { selectedFile: user };
   fileChangedHandler = (event) => {
     this.setState({ selectedFile: event.target.files[0] });
   };
@@ -30,7 +32,7 @@ class SignUp extends Component {
               <div>
                 <h3> Upload Profile Picture </h3>
                 <React.Fragment>
-                  <input type="file" onChange={this.fileChangedHandler} accept="image/*"/>
+                  <input type="file" onChange={this.fileChangedHandler} accept="image/*" />
                 </React.Fragment>
               </div>
               <br></br>
