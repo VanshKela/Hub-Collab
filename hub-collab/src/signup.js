@@ -1,14 +1,19 @@
 import "./signup.css";
-import image from "./assets/image.png";
 import TextField from "./components/TextField.js";
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import user from "./assets/user.png";
 
 class SignUp extends Component {
-  state = { selectedFile: user };
-  fileChangedHandler = (event) => {
-    this.setState({ selectedFile: event.target.files[0] });
+  state = { selectedFile: user, name: 'XYZ', email: 'XYZ@gmail.com'};
+  fileChangeHandler = (event) => {
+    this.setState({ selectedFile:  URL.createObjectURL(event.target.files[0]) });
+  };
+  nameChangeHandler = (event) => {
+    this.setState({ name:  event.target.value });
+  };
+  emailChangeHandler = (event) => {
+    this.setState({ email: event.target.value });
   };
   uploadHandler = () => {
     console.log(this.state.selectedFile);
@@ -23,16 +28,16 @@ class SignUp extends Component {
             </header>
             <article className="form">
               <h2>Sign Up</h2>
-              <TextField type={"text"} property={"Name"} />
+              <TextField onChange={this.nameChangeHandler} type={"text"} property={"Name"} />
               <br></br>
-              <TextField type={"text"} property={"Email"} />
+              <TextField onChange={this.emailChangeHandler} type={"text"} property={"Email"} />
               <br></br>
-              <TextField type={"password"} property={"Password"} />
+              <TextField onChange={null} type={"password"} property={"Password"} />
               <br></br>
               <div>
                 <h3> Upload Profile Picture </h3>
                 <React.Fragment>
-                  <input type="file" onChange={this.fileChangedHandler} accept="image/*" />
+                  <input type="file" onChange={this.fileChangeHandler} accept="image/*"/>
                 </React.Fragment>
               </div>
               <br></br>
@@ -49,7 +54,9 @@ class SignUp extends Component {
             </article>
           </div>
           <div className="img-container">
-            <img className="img" src={image} />
+            <img className="small-image" src={this.state.selectedFile}></img>
+            <h1>{this.state.name}</h1>
+            <h2>{this.state.email}</h2>
           </div>
         </div>
       </main>
