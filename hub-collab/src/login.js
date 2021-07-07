@@ -1,7 +1,6 @@
 import "./signup.css";
 import image2 from "./assets/image2.png";
 import TextField from "./components/TextField.js";
-import FileUploadButton from "./components/Uploadimage.js";
 import {Link} from "react-router-dom";
 function LogIn() {
   return (
@@ -22,7 +21,7 @@ function LogIn() {
             <button type="button" class="signUpButton">
               SIGN IN
             </button>
-            <br></br><br></br>
+            <br></br>
             <p>
               Forgot Password? <span class="signInButton">Click Here to Reset</span>
             </p>

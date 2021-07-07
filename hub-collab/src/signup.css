@@ -4,7 +4,7 @@
         display: grid;
         grid-template-columns: 50% 50%;
     }
-
+    
     .signUpButton {
         text-align: center;
         width: 55%;
@@ -16,16 +16,16 @@
         background-color: #5138EE;
         border: none;
     }
-
+    
     .signInButton {
         color: #1A5DDF;
     }
-
+    
     .form-container {
         background: #fffefe;
         padding-left: 20%;
     }
-
+    
     h1 {
         font-family: Bebas Neue;
         font-style: normal;
@@ -35,13 +35,13 @@
         text-align: center;
         color: #000000;
     }
-
+    
     input {
         font-family: Questrial;
         padding: 12px 20px;
         font-size: 16px;
     }
-
+    
     h2 {
         font-family: Questrial;
         font-style: normal;
@@ -50,7 +50,8 @@
         line-height: 43px;
         color: #000000;
     }
-    p{
+    
+    p {
         font-family: Questrial;
         font-style: normal;
         font-weight: normal;
@@ -58,18 +59,25 @@
         line-height: 15px;
         color: #000000;
     }
-
-   
+    
     .img-container {
-        
         height: 100%;
         display: block;
     }
-
+    
     .img {
-        float: right;  
+        float: right;
         max-height: 100vh;
         max-width: 100vh;
         display: block;
         height: 100%;
+    }
+    
+    .upload-button {
+        width: 217px;
+        height: 40px;
+        background: rgba(255, 255, 255, 0.29);
+        border: 1px solid rgba(0, 0, 0, 0.32);
+        box-sizing: border-box;
+        border-radius: 30px;
     }
