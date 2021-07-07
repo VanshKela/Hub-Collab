@@ -1,8 +1,8 @@
 import "./signup.css";
-import image from "./assets/image.png";
+import image2 from "./assets/image2.png";
 import TextField from "./components/TextField.js";
 import FileUploadButton from "./components/Uploadimage.js";
-
+import {Link} from "react-router-dom";
 function LogIn() {
   return (
     <main>
@@ -12,25 +12,27 @@ function LogIn() {
             <h1>HubCollab</h1>
           </header>
           <article className="form">
-            <h2>Log In</h2>
-            <TextField type={"text"} property={"Name"} />
-            <br></br>
+            <h2>Sign In</h2>
+            
             <TextField type={"text"} property={"Email"} />
             <br></br>
             <TextField type={"password"} property={"Password"} />
-            <br></br>
-            <FileUploadButton />
-            <br></br>
+            <br></br><br></br>
+            
             <button type="button" class="signUpButton">
-              SIGN UP
+              SIGN IN
             </button>
+            <br></br><br></br>
             <p>
-              Already have an account? <span class="signInButton">SIGN IN</span>
+              Forgot Password? <span class="signInButton">Click Here to Reset</span>
+            </p>
+            <p>
+              Don't Have an Account? <span class="signInButton"><Link to ="/">SIGN UP</Link></span>
             </p>
           </article>
         </div>
         <div className="img-container">
-          <img className="img" src={image} />
+          <img className="img"  src={image2} />
         </div>
       </div>
     </main>

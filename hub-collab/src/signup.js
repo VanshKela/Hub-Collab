@@ -24,6 +24,7 @@ function SignUp() {
             <button type="button" class="signUpButton">
               SIGN UP
             </button>
+            <br></br>
             <p>
               Already have an account? <span class="signInButton"><Link to ="/login">SIGN IN</Link></span>
             </p>
