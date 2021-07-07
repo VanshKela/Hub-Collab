@@ -13,9 +13,9 @@ function LogIn() {
           <article className="form">
             <h2>Sign In</h2>
             
-            <TextField type={"text"} property={"Email"} />
+            <TextField onChange={null} type={"text"} property={"Email"} />
             <br></br>
-            <TextField type={"password"} property={"Password"} />
+            <TextField onChange={null} type={"password"} property={"Password"} />
             <br></br><br></br>
             
             <button type="button" class="signUpButton">
