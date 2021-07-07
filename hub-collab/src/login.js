@@ -27,7 +27,7 @@ function LogIn() {
               Forgot Password? <span class="signInButton">Click Here to Reset</span>
             </p>
             <p>
-              Don't Have an Account? <span class="signInButton"><Link to ="/">SIGN UP</Link></span>
+              Don't Have an Account? <span class="signInButton"><Link to ="/signup">SIGN UP</Link></span>
             </p>
           </article>
         </div>

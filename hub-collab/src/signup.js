@@ -26,7 +26,7 @@ function SignUp() {
             </button>
             <br></br>
             <p>
-              Already have an account? <span class="signInButton"><Link to ="/login">SIGN IN</Link></span>
+              Already have an account? <span class="signInButton"><Link to ="/">SIGN IN</Link></span>
             </p>
           </article>
         </div>

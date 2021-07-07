@@ -13,9 +13,13 @@ class FileUploadButton extends Component {
   render() {
     return (
       <div>
-        <h3>Upload Profile Picture</h3>
+        <h3> Upload Profile Picture </h3>
         <React.Fragment>
-          <input type="file" onChange={this.fileChangedHandler} />
+          <input
+            type="file"
+            onChange={this.fileChangedHandler}
+            accept="image/*"
+          />
           {/* <button onClick={this.uploadHandler}>Upload!</button> */}
         </React.Fragment>
       </div>
