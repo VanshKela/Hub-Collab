@@ -59,6 +59,7 @@
         color: #000000;
     }
 
+   
     .img-container {
         
         height: 100%;
@@ -66,7 +67,7 @@
     }
 
     .img {
-        
+        float: right;  
         max-height: 100vh;
         max-width: 100vh;
         display: block;
