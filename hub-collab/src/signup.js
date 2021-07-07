@@ -1,4 +1,5 @@
 import "./signup.css";
+import Card from "./components/card.js";
 import uploadButton from "./assets/uploadButton.png";
 import TextField from "./components/TextField.js";
 import React, { Component } from "react";
@@ -77,11 +78,12 @@ class SignUp extends Component {
               </p>
             </form>
           </div>
-          <div className="img-container">
+          {/* <div className="img-container">
             <img className="small-image" src={this.state.selectedFile}></img>
             <h1>{this.state.name}</h1>
             <h2>{this.state.email}</h2>
-          </div>
+          </div> */}
+          <Card name={this.state.name} image={this.state.selectedFile}/>
         </div>
       </main>
     );
