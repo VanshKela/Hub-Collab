@@ -1,9 +1,12 @@
 .card {
-  position: absolute;
-  width: 500px;
-  height: 600px;
-  left: 60%;
-  top: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: auto;
+  width: 24rem;
+  height: 34rem;
 
   background: linear-gradient(
     180deg,
@@ -11,36 +14,27 @@
     rgba(255, 254, 248, 0.847126) 95.71%,
     rgba(255, 255, 252, 0.85) 98.25%
   );
-  border: 5px solid rgba(0, 0, 0, 0.38);
   box-sizing: border-box;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 25px;
 }
 .cardText {
-  position: absolute;
-  width: 411px;
-  height: 84px;
-  left: 8%;
-  top: 70%;
-
-  font-family: Lobster Two;
+  margin: 1em;
+  font-family: "Lobster Two";
   font-style: italic;
   font-weight: normal;
-  font-size: 40px;
+  font-size: 35px;
   line-height: 75px;
   text-align: center;
 
   color: #090909;
 }
 .cardImage {
-  position: absolute;
-  top: 5%;
+  width: 350px;
 }
 .userCard {
-  position: absolute;
-  height:200px;
+  object-fit: cover;
+  height: 200px;
   width: 200px;
-  left: 30%;
-  top: 35%;
   border-radius: 250px;
 }

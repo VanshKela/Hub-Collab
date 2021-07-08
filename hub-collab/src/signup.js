@@ -4,10 +4,10 @@ import React, { Component } from "react";
 import user from "./assets/user.png";
 import SignUpForm from "./signup1";
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
-import LogIn from "./login";
+import SkillForm from "./skill";
 
 class SignUp extends Component {
-  state = { selectedFile: user, name: "XYZ" };
+  state = { selectedFile: user, name: "User Name", email: "email@email.com" };
   fileChangeHandler = (event) => {
     this.setState({ selectedFile: URL.createObjectURL(event.target.files[0]) });
   };
@@ -25,7 +25,7 @@ class SignUp extends Component {
               </header>
               <Switch>
                 <Route exact path="/signup" render={()=> <SignUpForm onChangeName={this.nameChangeHandler} onChangeFile={this.fileChangeHandler}/>}></Route>
-                <Route exact path="/sign-up-techstack" component={LogIn}></Route>
+                <Route exact path="/sign-up-techstack" component={SkillForm}></Route>
               </Switch>
             </div>
             <Card name={this.state.name} image={this.state.selectedFile} />
