@@ -28,7 +28,8 @@ class SignUp extends Component {
                 <Route exact path="/sign-up-techstack" component={SkillForm}></Route>
               </Switch>
             </div>
-            <Card name={this.state.name} image={this.state.selectedFile} />
+            <div className="cardContainer"><Card name={this.state.name} image={this.state.selectedFile} /></div>
+            
           </div>
         </main>
       </Router>
