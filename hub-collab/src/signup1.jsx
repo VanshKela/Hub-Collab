@@ -36,9 +36,6 @@ function SignUpForm({ onChangeName, onChangeFile }) {
           </button>
         )}
       />
-      {/* <button type="button" class="signUpButton">
-          SIGN UP
-        </button> */}
       <br></br>
       <p>
         Already have an account?
