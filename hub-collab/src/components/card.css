@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex-wrap:wrap;
+  flex-wrap: wrap;
   margin: auto;
   width: 24rem;
   height: 34rem;
@@ -23,16 +23,17 @@
   font-family: "Lobster Two";
   font-style: italic;
   font-weight: normal;
-  font-size: 40px;
+  font-size: 35px;
   line-height: 75px;
   text-align: center;
 
   color: #090909;
 }
 .cardImage {
-  width: 300px;
+  width: 350px;
 }
 .userCard {
+  object-fit: cover;
   height: 200px;
   width: 200px;
   border-radius: 250px;
