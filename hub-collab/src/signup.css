@@ -90,3 +90,7 @@
         height: 150px;
         width: 150px;
     }
+    .cardContainer{
+        background-image: url("./assets/cardBack.png");
+      
+    }

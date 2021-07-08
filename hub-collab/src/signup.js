@@ -52,14 +52,15 @@ class SignUp extends Component {
                 <h3> Upload Profile Picture </h3>
 
                 <input
-                id="inputImage"
-              
+                  id="inputImage"
                   type="file"
                   onChange={this.fileChangeHandler}
                   accept="image/*"
                   hidden
                 />
-                <label htmlFor="inputImage"><img src={uploadButton} class="uploadButton"></img></label>
+                <label htmlFor="inputImage">
+                  <img src={uploadButton} class="uploadButton"></img>
+                </label>
               </div>
               <br></br>
               <button
@@ -78,12 +79,9 @@ class SignUp extends Component {
               </p>
             </form>
           </div>
-          {/* <div className="img-container">
-            <img className="small-image" src={this.state.selectedFile}></img>
-            <h1>{this.state.name}</h1>
-            <h2>{this.state.email}</h2>
-          </div> */}
-          <Card name={this.state.name} image={this.state.selectedFile}/>
+          <div className="cardContainer">
+            <Card name={this.state.name} image={this.state.selectedFile} />
+          </div>
         </div>
       </main>
     );
