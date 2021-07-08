@@ -16,10 +16,12 @@
         background-color: #5138EE;
         border: none;
     }
-    .uploadButton{
-        height:60px;
-        width:200px;
+    
+    .uploadButton {
+        height: 50px;
+        width: 200px;
     }
+    
     .signInButton {
         color: #1A5DDF;
     }
@@ -33,7 +35,7 @@
         font-family: Bebas Neue;
         font-style: normal;
         font-weight: normal;
-        font-size: 80px;
+        font-size: 72px;
         line-height: 50px;
         text-align: center;
         color: #000000;
@@ -49,8 +51,8 @@
         font-family: Questrial;
         font-style: normal;
         font-weight: normal;
-        font-size: 33px;
-        line-height: 43px;
+        font-size: 30px;
+        line-height: 38px;
         color: #000000;
     }
     
@@ -74,15 +76,6 @@
         max-width: 100vh;
         display: block;
         height: 100%;
-    }
-    
-    .upload-button {
-        width: 217px;
-        height: 40px;
-        background: rgba(255, 255, 255, 0.29);
-        border: 1px solid rgba(0, 0, 0, 0.32);
-        box-sizing: border-box;
-        border-radius: 30px;
     }
     
     .small-image {
