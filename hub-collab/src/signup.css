@@ -18,11 +18,13 @@
         font-size: 25px;
         background-color: #5138EE;
         border: none;
+        cursor: pointer;
     }
     
     .uploadButton {
-        height: 30px;
-        width: 100px;
+        height: 2em;
+        width: 7em;
+        cursor: pointer;
     }
     
     .signInButton {

@@ -1,10 +1,11 @@
 import React from "react";
 import "./signup.css";
 
-function SkillForm({ onChangeName, onChangeFile }) {
+function SkillForm({onClick}) {
   return (
     <form className="form">
-      Skill
+      <h2>Skill</h2>
+      <button value="C++" onClick={onClick}>C++</button>
     </form>
   );
 }
