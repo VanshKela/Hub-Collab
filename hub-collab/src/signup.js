@@ -1,10 +1,10 @@
 import "./signup.css";
 import Card from "./components/card.js";
-import uploadButton from "./assets/uploadButton.png";
-import TextField from "./components/TextField.js";
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import user from "./assets/user.png";
+import SignUpForm from "./signup1";
+import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import SkillForm from "./skill";
 
 class SignUp extends Component {
   state = { selectedFile: user, name: "User Name", email: "email@email.com" };
@@ -14,76 +14,25 @@ class SignUp extends Component {
   nameChangeHandler = (event) => {
     this.setState({ name: event.target.value });
   };
-  emailChangeHandler = (event) => {
-    this.setState({ email: event.target.value });
-  };
-  uploadHandler = () => {
-    console.log(this.state.selectedFile);
-  };
   render() {
     return (
-      <main>
-        <div className="container">
-          <div className="form-container">
-            <header>
-              <h1>HubCollab</h1>
-            </header>
-            <form className="form">
-              <h2>Sign Up</h2>
-              <TextField
-                onChange={this.nameChangeHandler}
-                type={"text"}
-                property={"Name"}
-              />
-              <br></br>
-              <TextField
-                onChange={this.emailChangeHandler}
-                type={"text"}
-                property={"Email"}
-              />
-              <br></br>
-              <TextField
-                onChange={null}
-                type={"password"}
-                property={"Password"}
-              />
-              <br></br>
-              <div>
-                <h3> Upload Profile Picture </h3>
-
-                <input
-                  id="inputImage"
-                  type="file"
-                  onChange={this.fileChangeHandler}
-                  accept="image/*"
-                  hidden
-                />
-                <label htmlFor="inputImage">
-                  <img src={uploadButton} class="uploadButton"></img>
-                </label>
-              </div>
-              <br></br>
-              <button
-                type="button"
-                class="signUpButton"
-                onClick={this.uploadHandler}
-              >
-                SIGN UP
-              </button>
-              <br></br>
-              <p>
-                Already have an account?{" "}
-                <span class="signInButton">
-                  <Link to="/">SIGN IN</Link>
-                </span>
-              </p>
-            </form>
+      <Router>
+        <main>
+          <div className="container">
+            <div className="form-container">
+              <header>
+                <h1>HubCollab</h1>
+              </header>
+              <Switch>
+                <Route exact path="/signup" render={()=> <SignUpForm onChangeName={this.nameChangeHandler} onChangeFile={this.fileChangeHandler}/>}></Route>
+                <Route exact path="/sign-up-techstack" component={SkillForm}></Route>
+              </Switch>
+            </div>
+            <div className="cardContainer"><Card name={this.state.name} image={this.state.selectedFile} /></div>
+            
           </div>
-          <div className="cardContainer">
-            <Card name={this.state.name} image={this.state.selectedFile} />
-          </div>
-        </div>
-      </main>
+        </main>
+      </Router>
     );
   }
 }
