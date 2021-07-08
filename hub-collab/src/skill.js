@@ -2,12 +2,17 @@ import React from "react";
 import "./signup.css";
 
 function SkillForm({ onClick }) {
+  const skills = ["C++","HTML","CSS"]
   return (
     <form className="form">
       <h2>Skill</h2>
-      <input type="button" value="C++" onClick={onClick} />
-      <input type="button" value="HTML" onClick={onClick} />
-      <input type="button" value="CSS" onClick={onClick} />
+      <div>
+        {
+          skills.map((skill)=>{
+            return <input type="button" value={skill} onClick={onClick} />
+          })
+        }
+      </div>
     </form>
   );
 }
