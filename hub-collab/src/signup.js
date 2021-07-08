@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import user from "./assets/user.png";
 
 class SignUp extends Component {
-  state = { selectedFile: user, name: "XYZ", email: "XYZ@gmail.com" };
+  state = { selectedFile: user, name: "User Name", email: "email@email.com" };
   fileChangeHandler = (event) => {
     this.setState({ selectedFile: URL.createObjectURL(event.target.files[0]) });
   };
