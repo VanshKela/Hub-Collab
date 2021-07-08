@@ -4,13 +4,13 @@ import "./signup.css";
 import uploadButton from "./assets/uploadButton.png";
 import { Link } from "react-router-dom";
 
-function SignUpForm({ onChangeName, onChangeEmail, onChangeFile }) {
+function SignUpForm({ onChangeName, onChangeFile }) {
   return (
     <form className="form">
       <h2>Sign Up</h2>
       <TextField onChange={onChangeName} type={"text"} property={"Name"} />
       <br></br>
-      <TextField onChange={onChangeEmail} type={"text"} property={"Email"} />
+      <TextField onChange={null} type={"text"} property={"Email"} />
       <br></br>
       <TextField onChange={null} type={"password"} property={"Password"} />
       <br></br>

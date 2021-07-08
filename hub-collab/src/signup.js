@@ -1,36 +1,37 @@
 import "./signup.css";
+import Card from "./components/card.js";
 import React, { Component } from "react";
 import user from "./assets/user.png";
 import SignUpForm from "./signup1";
+import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import LogIn from "./login";
 
 class SignUp extends Component {
-  state = { selectedFile: user, name: "XYZ", email: "XYZ@gmail.com" };
+  state = { selectedFile: user, name: "XYZ" };
   fileChangeHandler = (event) => {
     this.setState({ selectedFile: URL.createObjectURL(event.target.files[0]) });
   };
   nameChangeHandler = (event) => {
     this.setState({ name: event.target.value });
   };
-  emailChangeHandler = (event) => {
-    this.setState({ email: event.target.value });
-  };
   render() {
     return (
-      <main>
-        <div className="container">
-          <div className="form-container">
-            <header>
-              <h1>HubCollab</h1>
-            </header>
-            <SignUpForm onChangeName={this.nameChangeHandler} onChangeEmail={this.emailChangeHandler} onChangeFile={this.fileChangeHandler}/>
+      <Router>
+        <main>
+          <div className="container">
+            <div className="form-container">
+              <header>
+                <h1>HubCollab</h1>
+              </header>
+              <Switch>
+                <Route exact path="/signup" render={()=> <SignUpForm onChangeName={this.nameChangeHandler} onChangeFile={this.fileChangeHandler}/>}></Route>
+                <Route exact path="/sign-up-techstack" component={LogIn}></Route>
+              </Switch>
+            </div>
+            <Card name={this.state.name} image={this.state.selectedFile} />
           </div>
-          <div className="img-container">
-            <img className="small-image" src={this.state.selectedFile}></img>
-            <h1>{this.state.name}</h1>
-            <h2>{this.state.email}</h2>
-          </div>
-        </div>
-      </main>
+        </main>
+      </Router>
     );
   }
 }

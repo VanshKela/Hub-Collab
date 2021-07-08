@@ -18,12 +18,16 @@
     }
     
     .uploadButton {
-        height: 50px;
-        width: 200px;
+        height: 30px;
+        width: 100px;
     }
     
     .signInButton {
         color: #1A5DDF;
+    }
+    
+    .small-image {
+        height: 10%;
     }
     
     .form-container {
