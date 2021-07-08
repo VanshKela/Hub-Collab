@@ -6,9 +6,9 @@ import "./card.css";
 const Card = ({ name ,image}) => {
   return (
     <div className="card" >
-        <img class="cardImage" src={hub}/>
-        <img className="userCard" src={image}/>
-      <h3 className="cardText"> {name} </h3>
+        <img class="logo" src={hub}/>
+        <img className="userImage" src={image}/>
+      <h3 className="userName"> {name} </h3>
     </div>
   );
 };

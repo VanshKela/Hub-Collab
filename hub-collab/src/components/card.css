@@ -1,13 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap');
 .card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
   flex-wrap: wrap;
   margin: auto;
   width: 24rem;
   height: 34rem;
-
+  padding: 0;
   background: linear-gradient(
     180deg,
     rgba(255, 216, 143, 0.76) 2.55%,
@@ -17,25 +18,23 @@
   box-sizing: border-box;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 25px;
-  
 }
-.cardText {
-  margin: 1em;
-  font-family: "Lobster Two";
-  font-style: italic;
-  font-weight: normal;
-  font-size: 35px;
-  line-height: 75px;
+.userName {
+  font-size: 1.75em;
+  letter-spacing: 0.2px;
   text-align: center;
-
-  color: #090909;
+  font-family: 'Lato', sans-serif;
+  margin: 0.5em;
 }
-.cardImage {
+.logo {
   width: 350px;
+  margin-top: 1em;
 }
-.userCard {
+.userImage {
+  margin-top: -1.5em;
+  margin-bottom: 1.5em;
   object-fit: cover;
-  height: 200px;
-  width: 200px;
+  height: 150px;
+  width: 150px;
   border-radius: 250px;
 }
