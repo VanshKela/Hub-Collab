@@ -91,8 +91,7 @@
     }
     .cardContainer{
         background-image: url("./assets/cardBack.png");
-        
         display:flex;
-        flex-direction: column;
-        height:100%;
+        height:100vh;
+        
     }
