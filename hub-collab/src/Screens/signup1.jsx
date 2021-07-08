@@ -1,7 +1,7 @@
-import TextField from "./components/TextField.js";
+import TextField from "./../components/TextField.js";
 import React from "react";
 import "./signup.css";
-import uploadButton from "./assets/uploadButton.png";
+import uploadButton from "./../assets/uploadButton.png";
 import { Route,Link } from "react-router-dom";
 
 function SignUpForm({ onChangeName, onChangeFile }) {

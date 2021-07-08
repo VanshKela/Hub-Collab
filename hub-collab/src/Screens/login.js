@@ -1,6 +1,6 @@
 import "./signup.css";
-import image2 from "./assets/image2.png";
-import TextField from "./components/TextField.js";
+import image2 from "./../assets/image2.png";
+import TextField from "./../components/TextField.js";
 import {Link} from "react-router-dom";
 function LogIn() {
   return (

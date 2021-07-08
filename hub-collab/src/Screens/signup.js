@@ -1,7 +1,7 @@
 import "./signup.css";
-import Card from "./components/card.js";
+import Card from "./../components/card.js";
 import React, { Component } from "react";
-import user from "./assets/user.png";
+import user from "./../assets/user.png";
 import SignUpForm from "./signup1";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import SkillForm from "./skill";
