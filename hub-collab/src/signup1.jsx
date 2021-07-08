@@ -25,7 +25,7 @@ function SignUpForm({ onChangeName, onChangeFile }) {
           hidden
         />
         <label htmlFor="inputImage">
-          <img src={uploadButton} class="uploadButton"></img>
+          <img alt="Upload" src={uploadButton} class="uploadButton"></img>
         </label>
       </div>
       <br></br>

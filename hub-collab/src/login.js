@@ -31,7 +31,7 @@ function LogIn() {
           </article>
         </div>
         <div className="img-container">
-          <img className="img"  src={image2} />
+          <img alt="refresh" className="img"  src={image2} />
         </div>
       </div>
     </main>
