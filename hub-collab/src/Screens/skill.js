@@ -9,7 +9,7 @@ function SkillForm({ onClick }) {
       <div>
         {
           skills.map((skill)=>{
-            return <input type="button" value={skill} onClick={onClick} />
+            return <button type="button" value={skill} onClick={onClick} >{skill}</button>
           })
         }
       </div>
