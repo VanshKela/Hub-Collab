@@ -2,7 +2,7 @@ import TextField from "./components/TextField.js";
 import React from "react";
 import "./signup.css";
 import uploadButton from "./assets/uploadButton.png";
-import { Link } from "react-router-dom";
+import { Route,Link } from "react-router-dom";
 
 function SignUpForm({ onChangeName, onChangeFile }) {
   return (
@@ -29,11 +29,16 @@ function SignUpForm({ onChangeName, onChangeFile }) {
         </label>
       </div>
       <br></br>
-      <Link to="/sign-up-techstack">
-        <button type="button" class="signUpButton">
+      <Route
+        render={({ history }) => (
+          <button type="button" class="signUpButton" onClick={() => { history.push('sign-up-techstack')}}>
+            SIGN UP
+          </button>
+        )}
+      />
+      {/* <button type="button" class="signUpButton">
           SIGN UP
-        </button>
-      </Link>
+        </button> */}
       <br></br>
       <p>
         Already have an account?
