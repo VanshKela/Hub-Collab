@@ -113,8 +113,8 @@ p {
 
 .buttonSkill {
     margin: 15px 15px;
-    width: 10.6vw;
-    height: 10vh;
+    width: 12vw;
+    height: 12vh;
     background-color: white;
     border: 2px solid #050d52;
     box-sizing: border-box;
@@ -136,10 +136,16 @@ p {
 .form {
     position: relative;
     margin-right: 5%;
+    width:50vw;
 }
 
 .skills-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: left;
+   
+}
+
+header{
+    width: 50vw;
 }
