@@ -1,114 +1,128 @@
-    @import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-    .container {
-        margin: 0;
-        padding: 0;
-        display: grid;
-        grid-template-columns: 50% 50%;
-    }
-    
-    .signUpButton {
-        text-align: center;
-        width: 55%;
-        border-radius: 40px;
-        height: 40px;
-        color: white;
-        font-family: Questrial;
-        font-size: 25px;
-        background-color: #5138EE;
-        border: none;
-    }
-    
-    .uploadButton {
-        height: 30px;
-        width: 100px;
-    }
-    
-    .signInButton {
-        color: #1A5DDF;
-    }
-    
-    .form-container {
-        width: 100vh;
-        margin-bottom: 0;
-        display: flex;
-        flex-direction: column;
-        background: #fffefe;
-        padding-left: 10%;
-        padding-right: 5%;
-        height: 100%;
-    }
-    
-    h1 {
-        font-family: Bebas Neue;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 72px;
-        line-height: 50px;
-        text-align: center;
-        color: #000000;
-    }
-    
-    input {
-        font-family: Questrial;
-        padding: 12px 20px;
-        font-size: 16px;
-    }
-    
-    h2 {
-        font-family: Questrial;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 30px;
-        line-height: 38px;
-        color: #000000;
-    }
-    
-    p {
-        font-family: Questrial;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 14px;
-        line-height: 15px;
-        color: #000000;
-    }
-    
-    .img-container {
-        height: 100%;
-        display: block;
-    }
-    
-    .img {
-        float: right;
-        max-height: 100vh;
-        max-width: 100vh;
-        display: block;
-        height: 100%;
-    }
-    
-    .small-image {
-        height: 150px;
-        width: 150px;
-    }
-    
-    .cardContainer {
-        left: 50%;
-        position: fixed;
-        height: 100vh;
-        display:flex;
-        width: 50%;
-        background-size: cover;
-        background-image: url("./../assets/cardBack.png");
-    
-    }
+@import url("https://fonts.googleapis.com/css2?family=Questrial&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+.container {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
 
-    .buttonSkill{
-        margin: 10px 10px;
-        width: 200px;
-        height: 200px;
-    }
+.signUpButton {
+  text-align: center;
+  width: 55%;
+  border-radius: 40px;
+  height: 40px;
+  color: white;
+  font-family: Questrial;
+  font-size: 25px;
+  background-color: #5138ee;
+  border: none;
+}
 
-    .form{
-        position: relative;
-        margin-right: 5%;
-    }
+.uploadButton {
+  height: 30px;
+  width: 100px;
+}
+
+.signInButton {
+  color: #1a5ddf;
+}
+
+.form-container {
+  width: 100vh;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  background: #fffefe;
+  padding-left: 10%;
+  padding-right: 5%;
+  height: 100%;
+}
+
+h1 {
+  font-family: Bebas Neue;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 72px;
+  line-height: 50px;
+  text-align: center;
+  color: #000000;
+}
+
+input {
+  font-family: Questrial;
+  padding: 12px 20px;
+  font-size: 16px;
+}
+
+h2 {
+  font-family: Questrial;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 38px;
+  color: #000000;
+}
+
+p {
+  font-family: Questrial;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 15px;
+  color: #000000;
+}
+
+.img-container {
+  height: 100%;
+  display: block;
+}
+
+.img {
+  float: right;
+  max-height: 100vh;
+  max-width: 100vh;
+  display: block;
+  height: 100%;
+}
+
+.small-image {
+  height: 150px;
+  width: 150px;
+}
+
+.cardContainer {
+  left: 50%;
+  position: fixed;
+  height: 100vh;
+  display: flex;
+  width: 50%;
+  background-size: cover;
+  background-image: url("./../assets/cardBack.png");
+}
+
+.buttonSkill {
+  margin: 10px 10px;
+  width: 150px;
+  height: 150px;
+  background: linear-gradient(
+    180deg,
+    #ffc860 0%,
+    rgba(248, 255, 249, 0.78) 100%
+  );
+  border: 3px solid #1a3c3e;
+  box-sizing: border-box;
+  border-radius: 25px;
+  font-family: Questrial;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 31px;
+  text-align: center;
+  color: #024401;
+}
+
+.form {
+  position: relative;
+  margin-right: 5%;
+}
