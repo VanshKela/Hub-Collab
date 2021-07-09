@@ -2,7 +2,7 @@ import React from "react";
 import "./signup.css";
 
 function SkillForm({ onClick }) {
-  const skills = ["C++","HTML","CSS","C","JS","REACT","PYTHON","GO","DART","FLUTTER","NODEJS"]
+  const skills = ["C++","HTML","CSS","C","JavaScript","React","Python","Go","Dart","Flutter","Node.js"]
   return (
     <form className="form">
       <h2>Choose your Skills</h2>

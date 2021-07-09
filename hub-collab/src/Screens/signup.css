@@ -17,11 +17,17 @@
     font-size: 25px;
     background-color: #5138ee;
     border: none;
+    cursor: pointer;
+}
+
+label{
+    cursor: pointer;
 }
 
 .uploadButton {
     height: 30px;
     width: 100px;
+    cursor: pointer;
 }
 
 .signInButton {
@@ -92,30 +98,38 @@ p {
 }
 
 .cardContainer {
-    left: 50%;
-    position: fixed;
+    position: sticky;
+    right: 0%;
+    left:50%;
+    top:0%;
+    bottom:0%;
     height: 100vh;
     display: flex;
-    width: 50%;
+    width: 50vw;
+    max-width: 50vw;
     background-size: cover;
     background-image: url("./../assets/cardBack.png");
 }
 
 .buttonSkill {
-    margin: 10px 10px;
-    width: 150px;
-    height: 150px;
-    background: linear-gradient( 180deg, #ffc860 0%, rgba(248, 255, 249, 0.78) 100%);
-    border: 3px solid #1a3c3e;
+    margin: 15px 15px;
+    width: 10.6vw;
+    height: 10vh;
+    background-color: white;
+    border: 3px solid #050d52;
     box-sizing: border-box;
-    border-radius: 25px;
-    font-family: Questrial;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 30px;
-    line-height: 31px;
+    border-radius: 10px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.420vw;
     text-align: center;
-    color: #024401;
+    color: #050d52;
+    cursor: pointer;
+}
+
+.buttonSkill:hover{
+    background-color: #050d52;
+    color: white;
+    transition: 250ms ease-in-out;
 }
 
 .form {

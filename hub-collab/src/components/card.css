@@ -24,7 +24,7 @@
   letter-spacing: 0.2px;
   text-align: center;
   font-family: 'Lato', sans-serif;
-  font-weight: bold;
+  /* font-weight: bold; */
   margin: 0.5em;
 }
 .cardImage {
