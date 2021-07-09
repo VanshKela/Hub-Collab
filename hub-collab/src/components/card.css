@@ -11,7 +11,6 @@
   height: 80vh;
   padding: 2em;
   background: linear-gradient(180.13deg, #0011AC 2.37%, #3794EB 103.13%);
-  box-sizing: border-box;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 25px;
 }

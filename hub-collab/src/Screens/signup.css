@@ -98,7 +98,7 @@ p {
 }
 
 .cardContainer {
-    position: sticky;
+    position: fixed;
     right: 0%;
     left:50%;
     top:0%;
