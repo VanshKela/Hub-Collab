@@ -38,7 +38,7 @@ class SignUp extends Component {
           <div className="container">
             <div className="form-container">
               <header>
-                <h1>HubCollab</h1>
+                <h1 className="headerName">HubCollab</h1>
               </header>
               <Switch>
                 <Route
