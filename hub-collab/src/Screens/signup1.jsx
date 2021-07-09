@@ -2,7 +2,7 @@ import TextField from "./../components/TextField.js";
 import React from "react";
 import "./signup.css";
 import uploadButton from "./../assets/uploadButton.png";
-import { Route,Link } from "react-router-dom";
+import { Route} from "react-router-dom";
 
 function SignUpForm({ onChangeName, onChangeFile }) {
   return (
@@ -40,7 +40,14 @@ function SignUpForm({ onChangeName, onChangeFile }) {
       <p>
         Already have an account?
         <span class="signInButton">
-          <Link to="/">SIGN IN</Link>
+        <Route
+        render={({ history }) => (
+          <button id="back-btn" hidden type="button" onClick={() => { history.goBack()}}>
+            SIGN IN
+          </button>
+        )}
+      />
+      <label htmlFor="back-btn">SIGN IN</label>
         </span>
       </p>
     </form>
