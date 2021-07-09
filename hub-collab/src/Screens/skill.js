@@ -5,7 +5,7 @@ function SkillForm({ onClick }) {
   const skills = ["C++","HTML","CSS","C","JS","REACT","PYTHON","GO","DART","FLUTTER","NODEJS"]
   return (
     <form className="form">
-      <h2>Skill</h2>
+      <h2>Choose your Skills</h2>
       <div>
         {
           skills.map((skill)=>{
