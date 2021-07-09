@@ -116,7 +116,7 @@ p {
     width: 10.6vw;
     height: 10vh;
     background-color: white;
-    border: 3px solid #050d52;
+    border: 2px solid #050d52;
     box-sizing: border-box;
     border-radius: 10px;
     font-family: 'Nunito', sans-serif;
@@ -129,7 +129,8 @@ p {
 .buttonSkill:hover{
     background-color: #050d52;
     color: white;
-    transition: 250ms ease-in-out;
+    box-shadow:2px 2px 2px 1px rgba(0, 0, 0, 0.4);
+    transition: 300ms ease-in-out;
 }
 
 .form {

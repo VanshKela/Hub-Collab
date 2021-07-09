@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap');
 .card {
   display: flex;
   flex-direction: column;
@@ -6,15 +7,10 @@
   /* justify-content: center; */
   flex-wrap: wrap;
   margin: auto;
-  width: 24rem;
-  height: 34rem;
-  padding: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(255, 216, 143, 0.76) 2.55%,
-    rgba(255, 254, 248, 0.847126) 95.71%,
-    rgba(255, 255, 252, 0.85) 98.25%
-  );
+  width: 26vw;
+  height: 80vh;
+  padding: 2em;
+  background: linear-gradient(180.13deg, #0011AC 2.37%, #3794EB 103.13%);
   box-sizing: border-box;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 25px;
@@ -23,15 +19,16 @@
   font-size: 2em;
   letter-spacing: 0.2px;
   text-align: center;
-  font-family: 'Lato', sans-serif;
-  /* font-weight: bold; */
+  font-family: "Lato", sans-serif;
+  color: white;
   margin: 0.5em;
 }
 .cardImage {
   width: 350px;
   margin-top: 1em;
+  filter: invert(100%);
 }
-.userCard{
+.userCard {
   margin-top: -1.5em;
   margin-bottom: 1.5em;
   object-fit: cover;
@@ -40,11 +37,13 @@
   border-radius: 250px;
 }
 
-.cardSkillText{
-  font-family: Questrial;
+.cardSkillText {
+  color: white;
+  font-family: 'Noto Sans JP', sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 22px;
+  word-spacing: 5px;
   line-height: 31px;
   text-align: center;
   margin-top: 50px;
