@@ -9,7 +9,7 @@ const Card = ({ name ,image, tech}) => {
         <img alt="error" class="cardImage" src={hub}/>
         <img alt="error" className="userCard" src={image}/>
       <h3 className="cardText"> {name} </h3>
-      <p>{tech.join(', ')}</p>
+      <p className ="cardSkillText">{tech.join(', ')}</p>
     </div>
   );
 };
