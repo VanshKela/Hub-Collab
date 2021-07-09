@@ -6,7 +6,7 @@ function SkillForm({ onClick }) {
   return (
     <form className="form">
       <h2>Choose your Skills</h2>
-      <div>
+      <div className="skills-container">
         {
           skills.map((skill)=>{
             return <button type="button" value={skill} onClick={onClick} class="buttonSkill" >{skill}</button>
