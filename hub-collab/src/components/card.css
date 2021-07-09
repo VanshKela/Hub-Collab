@@ -19,18 +19,18 @@
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 25px;
 }
-.userName {
+.cardText {
   font-size: 1.75em;
   letter-spacing: 0.2px;
   text-align: center;
   font-family: 'Lato', sans-serif;
   margin: 0.5em;
 }
-.logo {
+.cardImage {
   width: 350px;
   margin-top: 1em;
 }
-.userImage {
+.userCard{
   margin-top: -1.5em;
   margin-bottom: 1.5em;
   object-fit: cover;

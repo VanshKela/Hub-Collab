@@ -1,6 +1,6 @@
 import "./signup.css";
-import image2 from "./assets/image2.png";
-import TextField from "./components/TextField.js";
+import image2 from "./../assets/image2.png";
+import TextField from "./../components/TextField.js";
 import {Link} from "react-router-dom";
 function LogIn() {
   return (
@@ -31,7 +31,7 @@ function LogIn() {
           </article>
         </div>
         <div className="img-container">
-          <img className="img"  src={image2} />
+          <img alt="refresh" className="img"  src={image2} />
         </div>
       </div>
     </main>

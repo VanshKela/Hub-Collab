@@ -1,7 +1,6 @@
     @import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
     .container {
-        
         margin: 0;
         padding: 0;
         display: grid;
@@ -33,7 +32,7 @@
     
     .form-container {
         margin-bottom: 0;
-        display:flex;
+        display: flex;
         flex-direction: column;
         background: #fffefe;
         padding-left: 20%;
@@ -91,9 +90,10 @@
         height: 150px;
         width: 150px;
     }
-    .cardContainer{
-        background-image: url("./assets/cardBack.png");
-        display:flex;
-        height:100vh;
+    
+    .cardContainer {
+        background-image: url("./../assets/cardBack.png");
+        display: flex;
+        height: 100vh;
         background-size: cover;
     }

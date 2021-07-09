@@ -1,7 +1,7 @@
-import TextField from "./components/TextField.js";
+import TextField from "./../components/TextField.js";
 import React from "react";
 import "./signup.css";
-import uploadButton from "./assets/uploadButton.png";
+import uploadButton from "./../assets/uploadButton.png";
 import { Route,Link } from "react-router-dom";
 
 function SignUpForm({ onChangeName, onChangeFile }) {
@@ -25,7 +25,7 @@ function SignUpForm({ onChangeName, onChangeFile }) {
           hidden
         />
         <label htmlFor="inputImage">
-          <img src={uploadButton} class="uploadButton"></img>
+          <img alt="Upload" src={uploadButton} class="uploadButton"></img>
         </label>
       </div>
       <br></br>
