@@ -20,10 +20,11 @@
   border-radius: 25px;
 }
 .cardText {
-  font-size: 1.75em;
+  font-size: 2em;
   letter-spacing: 0.2px;
   text-align: center;
   font-family: 'Lato', sans-serif;
+  font-weight: bold;
   margin: 0.5em;
 }
 .cardImage {
@@ -37,4 +38,14 @@
   height: 150px;
   width: 150px;
   border-radius: 250px;
+}
+
+.cardSkillText{
+  font-family: Questrial;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 31px;
+  text-align: center;
+  margin-top: 50px;
 }
