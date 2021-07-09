@@ -29,11 +29,13 @@
     }
     
     .form-container {
+        width: 100vh;
         margin-bottom: 0;
         display: flex;
         flex-direction: column;
         background: #fffefe;
-        padding-left: 20%;
+        padding-left: 10%;
+        padding-right: 5%;
         height: 100%;
     }
     
@@ -90,7 +92,23 @@
     }
     
     .cardContainer {
-        background-image: url("./../assets/cardBack.png");
-        display: flex;
+        left: 50%;
+        position: fixed;
         height: 100vh;
+        display:flex;
+        width: 50%;
+        background-size: cover;
+        background-image: url("./../assets/cardBack.png");
+    
+    }
+
+    .buttonSkill{
+        margin: 10px 10px;
+        width: 200px;
+        height: 200px;
+    }
+
+    .form{
+        position: relative;
+        margin-right: 5%;
     }
