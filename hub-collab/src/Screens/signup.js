@@ -2,7 +2,7 @@ import "./signup.css";
 import Card from "./../components/card.js";
 import React, { Component } from "react";
 import user from "./../assets/user.png";
-import SignUpForm from "./signup1";
+import SignUpForm from "./signupForm";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import SkillForm from "./skill";
 
@@ -12,9 +12,13 @@ class SignUp extends Component {
     name: "User Name",
     email: "email@email.com",
     tech: [],
+    visibleButton: false,
   };
   fileChangeHandler = (event) => {
     this.setState({ selectedFile: URL.createObjectURL(event.target.files[0]) });
+  };
+  registerButtonHandler = (event) => {
+    this.setState({ visibleButton: true });
   };
   nameChangeHandler = (event) => {
     this.setState({ name: event.target.value });
@@ -33,6 +37,7 @@ class SignUp extends Component {
 
   render() {
     return (
+    <>
       <Router>
         <main>
           <div className="container">
@@ -48,6 +53,7 @@ class SignUp extends Component {
                     <SignUpForm
                       onChangeName={this.nameChangeHandler}
                       onChangeFile={this.fileChangeHandler}
+                      onClickButton={this.registerButtonHandler}
                     />
                   )}
                 ></Route>
@@ -64,10 +70,16 @@ class SignUp extends Component {
                 image={this.state.selectedFile}
                 tech={this.state.tech}
               />
+              {this.state.visibleButton ? (
+                <button className="registerButton">Register</button>
+              ) : (
+                null
+              )}
             </div>
           </div>
         </main>
       </Router>
+      </>
     );
   }
 }

@@ -20,7 +20,7 @@
     cursor: pointer;
 }
 
-label{
+label {
     cursor: pointer;
 }
 
@@ -100,15 +100,18 @@ p {
 .cardContainer {
     position: fixed;
     right: 0%;
-    left:50%;
-    top:0%;
-    bottom:0%;
+    left: 50%;
+    top: 5%;
+    bottom: 0%;
     height: 100vh;
     display: flex;
     width: 50vw;
     max-width: 50vw;
     background-size: cover;
     background-image: url("./../assets/cardBack.png");
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .buttonSkill {
@@ -126,26 +129,40 @@ p {
     cursor: pointer;
 }
 
-.buttonSkill:hover{
+.registerButton {
+    margin-bottom: 8%;
+    width: 10vw;
+    height: 8vh;
+    background-color: white;
+    border: 2px solid #050d52;
+    box-sizing: border-box;
+    border-radius: 10px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.420vw;
+    text-align: center;
+    color: #050d52;
+    cursor: pointer;
+}
+
+.buttonSkill:hover {
     background-color: #050d52;
     color: white;
-    box-shadow:2px 2px 2px 1px rgba(0, 0, 0, 0.4);
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.4);
     transition: 300ms ease-in-out;
 }
 
 .form {
     position: relative;
     margin-right: 5%;
-    width:50vw;
+    width: 50vw;
 }
 
 .skills-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: left;
-   
 }
 
-header{
+header {
     width: 50vw;
 }

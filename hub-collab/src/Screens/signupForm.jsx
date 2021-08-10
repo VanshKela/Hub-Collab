@@ -1,11 +1,12 @@
-import TextField from "./../components/TextField.js";
+import TextField from "../components/TextField.js";
 import React from "react";
 import "./signup.css";
 import uploadButton from "./../assets/uploadButton.png";
 import { Route} from "react-router-dom";
 
-function SignUpForm({ onChangeName, onChangeFile }) {
+function SignUpForm({ onChangeName, onChangeFile, onClickButton }) {
   return (
+    <>
     <form className="form">
       <h2>Sign Up</h2>
       <TextField onChange={onChangeName} type={"text"} property={"Name"} />
@@ -31,7 +32,7 @@ function SignUpForm({ onChangeName, onChangeFile }) {
       <br></br>
       <Route
         render={({ history }) => (
-          <button type="button" class="signUpButton" onClick={() => { history.push('sign-up-techstack')}}>
+          <button type="button" class="signUpButton" onClick={() => { history.push('sign-up-techstack'); onClickButton()}}>
             SIGN UP
           </button>
         )}
@@ -51,6 +52,7 @@ function SignUpForm({ onChangeName, onChangeFile }) {
         </span>
       </p>
     </form>
+    </>
   );
 }
 

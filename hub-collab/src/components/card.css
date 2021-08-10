@@ -1,49 +1,51 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap');
 .card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  /* justify-content: center; */
-  flex-wrap: wrap;
-  margin: auto;
-  width: 26vw;
-  height: 80vh;
-  padding: 2em;
-  background: linear-gradient(180.13deg, #0011AC 2.37%, #3794EB 103.13%);
-  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* flex-wrap: wrap; */
+    margin: auto;
+    width: 20vw;
+    height: 70vh;
+    padding: 2em;
+    background: linear-gradient(180.13deg, #0011AC 2.37%, #3794EB 103.13%);
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 25px;
 }
+
 .cardText {
-  font-size: 2em;
-  letter-spacing: 0.2px;
-  text-align: center;
-  font-family: "Lato", sans-serif;
-  color: white;
-  margin: 0.5em;
+    font-size: 2em;
+    letter-spacing: 0.2px;
+    text-align: center;
+    font-family: "Lato", sans-serif;
+    color: white;
+    margin: 0.5em;
 }
+
 .cardImage {
-  width: 350px;
-  margin-top: 1em;
-  filter: invert(100%);
+    width: 350px;
+    margin-top: 1em;
+    filter: invert(100%);
 }
+
 .userCard {
-  margin-top: -1.5em;
-  margin-bottom: 1.5em;
-  object-fit: cover;
-  height: 150px;
-  width: 150px;
-  border-radius: 250px;
+    margin-top: -1.5em;
+    margin-bottom: 1.5em;
+    object-fit: cover;
+    height: 150px;
+    width: 150px;
+    border-radius: 250px;
 }
 
 .cardSkillText {
-  color: white;
-  font-family: 'Noto Sans JP', sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 22px;
-  word-spacing: 5px;
-  line-height: 31px;
-  text-align: center;
-  margin-top: 50px;
+    color: white;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    word-spacing: 5px;
+    line-height: 31px;
+    text-align: center;
+    margin-top: 50px;
 }
