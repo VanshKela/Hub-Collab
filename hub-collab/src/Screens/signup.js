@@ -71,7 +71,7 @@ class SignUp extends Component {
                 tech={this.state.tech}
               />
               {this.state.visibleButton ? (
-                <button className="registerButton">Register</button>
+                <button onClick={event =>  window.location.href='/'} className="registerButton">Register</button>
               ) : (
                 null
               )}
