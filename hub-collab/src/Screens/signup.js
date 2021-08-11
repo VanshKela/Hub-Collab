@@ -25,9 +25,10 @@ function SignUp() {
       window.onpopstate = () => {
         setState({...state,visibleButton:false});
       }
+      window.history.pushState(null,  document.title, window.location.href)
     };
   }, [history.action])
-  
+
   const fileChangeHandler = (event) => {
     setState({
       ...state,
