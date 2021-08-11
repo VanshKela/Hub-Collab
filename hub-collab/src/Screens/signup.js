@@ -1,9 +1,14 @@
 import "./signup.css";
 import Card from "./../components/card.js";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import user from "./../assets/user.png";
 import SignUpForm from "./signupForm";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  useHistory
+} from "react-router-dom";
 import SkillForm from "./skill";
 
 function SignUp() {
@@ -14,6 +19,15 @@ function SignUp() {
     tech: [],
     visibleButton: false,
   });
+  const history = useHistory();
+  useEffect(() => {
+    return () => {
+      window.onpopstate = () => {
+        setState({...state,visibleButton:false});
+      }
+    };
+  }, [history.action])
+  
   const fileChangeHandler = (event) => {
     setState({
       ...state,
