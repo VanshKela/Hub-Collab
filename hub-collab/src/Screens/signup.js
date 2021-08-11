@@ -1,42 +1,46 @@
 import "./signup.css";
 import Card from "./../components/card.js";
-import React, { Component } from "react";
+import React, { useState } from "react";
 import user from "./../assets/user.png";
 import SignUpForm from "./signupForm";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import SkillForm from "./skill";
 
-class SignUp extends Component {
-  state = {
+function SignUp() {
+  const [state, setState] = useState({
     selectedFile: user,
     name: "User Name",
     email: "email@email.com",
     tech: [],
     visibleButton: false,
+  });
+  const fileChangeHandler = (event) => {
+    setState({
+      ...state,
+      selectedFile: URL.createObjectURL(event.target.files[0]),
+    });
   };
-  fileChangeHandler = (event) => {
-    this.setState({ selectedFile: URL.createObjectURL(event.target.files[0]) });
+  const registerButtonHandler = (event) => {
+    setState({ ...state, visibleButton: true });
   };
-  registerButtonHandler = (event) => {
-    this.setState({ visibleButton: true });
+  const nameChangeHandler = (event) => {
+    setState({ ...state, name: event.target.value });
   };
-  nameChangeHandler = (event) => {
-    this.setState({ name: event.target.value });
-  };
-  techChangeHandler = (e) => {
-    if (!this.state.tech.includes(e.target.value)) {
-      this.setState({
-        tech: this.state.tech.concat([e.target.value]),
+  const techChangeHandler = (e) => {
+    if (!state.tech.includes(e.target.value)) {
+      setState({
+        ...state,
+        tech: state.tech.concat([e.target.value]),
       });
     } else {
-      this.setState({
-        tech: this.state.tech.filter((item) => item !== e.target.value),
+      setState({
+        ...state,
+        tech: state.tech.filter((item) => item !== e.target.value),
       });
     }
   };
 
-  render() {
-    return (
+  return (
     <>
       <Router>
         <main>
@@ -51,37 +55,40 @@ class SignUp extends Component {
                   path="/sign-up"
                   render={() => (
                     <SignUpForm
-                      onChangeName={this.nameChangeHandler}
-                      onChangeFile={this.fileChangeHandler}
-                      onClickButton={this.registerButtonHandler}
+                      onChangeName={nameChangeHandler}
+                      onChangeFile={fileChangeHandler}
+                      onClickButton={registerButtonHandler}
                     />
                   )}
                 ></Route>
                 <Route
                   exact
                   path="/sign-up-techstack"
-                  render={() => <SkillForm onClick={this.techChangeHandler} />}
+                  render={() => <SkillForm onClick={techChangeHandler} />}
                 ></Route>
               </Switch>
             </div>
             <div className="cardContainer">
               <Card
-                name={this.state.name}
-                image={this.state.selectedFile}
-                tech={this.state.tech}
+                name={state.name}
+                image={state.selectedFile}
+                tech={state.tech}
               />
-              {this.state.visibleButton ? (
-                <button type="submit" onClick={event =>  window.location.href='/'} className="registerButton">Register</button>
-              ) : (
-                null
-              )}
+              {state.visibleButton ? (
+                <button
+                  type="submit"
+                  onClick={(event) => (window.location.href = "/")}
+                  className="registerButton"
+                >
+                  Register
+                </button>
+              ) : null}
             </div>
           </div>
         </main>
       </Router>
-      </>
-    );
-  }
+    </>
+  );
 }
 
 export default SignUp;
