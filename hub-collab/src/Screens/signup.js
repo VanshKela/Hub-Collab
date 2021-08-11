@@ -22,9 +22,8 @@ function SignUp() {
   const history = useHistory();
   useEffect(() => {
     return () => {
-      window.onpopstate = () => {
-        setState({...state,visibleButton:false});
-      }
+      window.onpopstate = () => setState({...state,visibleButton:false});
+      
       window.history.pushState(null,  document.title, window.location.href)
     };
   }, [history.action])
