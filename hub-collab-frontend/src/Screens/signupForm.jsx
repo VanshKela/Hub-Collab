@@ -1,20 +1,13 @@
 import TextField from "../components/TextField.js";
-import React, {useState} from "react";
+import React from "react";
 import "./signup.css";
 import uploadButton from "./../assets/uploadButton.png";
-import { Route } from "react-router-dom";
 import { useForm } from "react-hook-form";
 
 function SignUpForm({ onChangeName, onChangeFile, onClickButton }) {
-  const [isFormValid, setFormValid] = useState(false);
-  const {
-    register,
-    handleSubmit,
-    formState: { errors, isSubmitted, isValid },
-  } = useForm({ mode: "onChange" });
-  const onSubmit = (data) => {console.log(data);setFormValid(true)};
+  const { register } = useForm({ mode: "onChange" });
   return (
-    <form className="form" onSubmit={handleSubmit(onSubmit)}>
+    <React.Fragment>
       <h2>Sign Up</h2>
       <TextField
         register={register}
@@ -52,51 +45,7 @@ function SignUpForm({ onChangeName, onChangeFile, onClickButton }) {
         </label>
       </div>
       <br></br>
-      {!isFormValid&&<button
-            type="submit"
-            className="signUpButton" 
-            onClick={() => {
-              console.log(isSubmitted);
-            }}
-          >
-            SIGN UP
-      </button>}
-      {isFormValid&&<Route
-        render={({ history }) => (
-          <button
-            type="button"
-            className="signUpButton continue"
-            onClick={() => {
-              history.push("sign-up/techstack");
-              onClickButton();
-            }}
-          >
-            Continue
-          </button>
-        )}
-      />}
-      <br></br>
-      <p>
-        Already have an account?
-        <span class="signInButton">
-          <Route
-            render={({ history }) => (
-              <button
-                id="back-btn"
-                hidden
-                type="button"
-                onClick={() => {
-                  history.goBack();
-                }}
-              >
-                SIGN IN
-              </button>
-            )}
-          />
-          <label htmlFor="back-btn">SIGN IN</label>
-        </span>
-      </p>
-    </form>
+    </React.Fragment>
   );
 }
 

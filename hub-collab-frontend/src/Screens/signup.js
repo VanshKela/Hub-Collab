@@ -1,17 +1,18 @@
 import "./signup.css";
 import Card from "./../components/card.js";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import user from "./../assets/user.png";
 import SignUpForm from "./signupForm";
-import {
-  BrowserRouter as Router,
-  Route,
-  Switch,
-  useHistory
-} from "react-router-dom";
 import SkillForm from "./skillForm";
+import { useForm } from "react-hook-form";
 
 function SignUp() {
+  const {
+    handleSubmit
+  } = useForm({ criteriaMode: "all" });
+  const onSubmit = (data) => {
+    console.log(data);
+  };
   const [state, setState] = useState({
     selectedFile: user,
     name: "User Name",
@@ -19,18 +20,6 @@ function SignUp() {
     tech: [],
     visibleButton: false,
   });
-
-  const history = useHistory();
-  useEffect(() => {
-    return () => {
-      window.history.pushState(null,  document.title, window.location.href)
-    };
-  }, [history.action])
-
-  useEffect(() =>{
-    if (window.location.pathname === "/sign-up") 
-      setState({ ...state, visibleButton: false });
-  },[window.location.pathname])
 
   const fileChangeHandler = (event) => {
     setState({
@@ -59,51 +48,65 @@ function SignUp() {
   };
 
   return (
-      <Router>
-        <main>
-          <div className="container">
-            <div className="form-container">
-              <header>
-                <h1 className="headerName">HubCollab</h1>
-              </header>
-              <Switch>
-                <Route
-                  exact
-                  path="/sign-up"
-                  render={() => (
-                    <SignUpForm
-                      onChangeName={nameChangeHandler}
-                      onChangeFile={fileChangeHandler}
-                      onClickButton={registerButtonHandler}
-                    />
-                  )}
-                ></Route>
-                <Route
-                  exact
-                  path="/sign-up/techstack"
-                  render={() => <SkillForm onClick={techChangeHandler} />}
-                ></Route>
-              </Switch>
-            </div>
-            <div className="cardContainer">
-              <Card
-                name={state.name}
-                image={state.selectedFile}
-                tech={state.tech}
+    <div className="container">
+      <div className="form-container">
+        <header>
+          <h1 className="headerName">HubCollab</h1>
+        </header>
+        <form className="form" onSubmit={handleSubmit(onSubmit)}>
+          {!state.visibleButton && (
+            <div>
+              <SignUpForm
+                onChangeName={nameChangeHandler}
+                onChangeFile={fileChangeHandler}
+                onClickButton={registerButtonHandler}
               />
-              { state.visibleButton ? (
-                <button
-                  type="submit"
-                  onClick={(event) => (window.location.href = "/")}
-                  className="registerButton"
-                >
-                  Register
-                </button>
-              ) : null}
+              <button
+                type="button"
+                className="signUpButton continue"
+                onClick={() => {
+                  registerButtonHandler();
+                }}
+              >
+                Continue
+              </button>
+              <br></br>
+              <p>
+                Already have an account?
+                <span class="signInButton">
+                  <button
+                    id="back-btn"
+                    hidden
+                    type="button"
+                    onClick={(event) => (window.location.href = "/")}
+                  >
+                    SIGN IN
+                  </button>
+                  <label htmlFor="back-btn">SIGN IN</label>
+                </span>
+              </p>
             </div>
+          )}
+          {state.visibleButton && <SkillForm onClick={techChangeHandler} />}
+          <div className="cardContainer">
+            <Card
+              name={state.name}
+              image={state.selectedFile}
+              tech={state.tech}
+            />
+            {state.visibleButton && (
+              <button
+                type="submit"
+                onClick={(event) => (window.location.href = "/")}
+                className="registerButton"
+              >
+                Register
+              </button>
+            )}
           </div>
-        </main>
-      </Router>
+        </form>
+      </div>
+    </div>
   );
 }
 

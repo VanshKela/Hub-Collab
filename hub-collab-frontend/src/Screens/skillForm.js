@@ -4,7 +4,7 @@ import "./signup.css";
 function SkillForm({ onClick }) {
   const skills = ["C++","HTML","CSS","C","C#","JavaScript","React","Python","Go","Dart","Flutter","Node.js", "Rust", "Angular", "Kotlin", "Vue.js", "MySQL", "Java", "Ruby", "PHP", "R"]
   return (
-    <form className="form">
+    <React.Fragment>
       <h2>Choose your Skills</h2>
       <div className="skills-container">
         {
@@ -13,7 +13,7 @@ function SkillForm({ onClick }) {
           })
         }
       </div>
-    </form>
+    </React.Fragment>
   );
 }
 
