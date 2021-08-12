@@ -23,3 +23,7 @@ input:focus {
 .textfield {
     margin-bottom: 4vh;
 }
+
+.error {
+    color: red;
+}
