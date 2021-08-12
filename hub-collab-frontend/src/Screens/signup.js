@@ -28,9 +28,7 @@ function SignUp() {
   }, [history.action])
 
   useEffect(() =>{
-    if (window.location.pathname === "/sign-up/techstack") 
-      setState({ ...state, visibleButton: true });
-    else 
+    if (window.location.pathname === "/sign-up") 
       setState({ ...state, visibleButton: false });
   },[window.location.pathname])
 
