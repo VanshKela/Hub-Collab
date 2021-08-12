@@ -19,3 +19,11 @@ h3 {
 input:focus {
     outline: none;
 }
+
+.textfield {
+    margin-bottom: 4vh;
+}
+
+.error {
+    color: red;
+}

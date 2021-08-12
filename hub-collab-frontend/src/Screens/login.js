@@ -1,13 +1,17 @@
 import "./signup.css";
 import image2 from "./../assets/image2.png";
 import TextField from "./../components/TextField.js";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import React from "react";
 import { useForm } from "react-hook-form";
 
 function LogIn() {
-  const { register, handleSubmit, watch, formState: { errors } } = useForm();
-  const onSubmit = data => console.log(data);
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({ criteriaMode: "all" });
+  const onSubmit = (data) => console.log(data);
   return (
     <main>
       <div className="container">
@@ -17,25 +21,51 @@ function LogIn() {
           </header>
           <form className="form" onSubmit={handleSubmit(onSubmit)}>
             <h2>Sign In</h2>
-            <TextField register={register} onChange={null} type={"text"} label={"Email"} />
-            <br></br>
-            <TextField register={register} onChange={null} type={"password"} label={"Password"} />
-            <br></br><br></br>
-            
+            <TextField
+              register={register}
+              onChange={null}
+              type={"text"}
+              label={"Email"}
+              properties={{
+                required: "Email is required.",
+                pattern: {
+                  value: /([a-zA-Z0-9]+)([\_\.\-{1}])?([a-zA-Z0-9]+)\@([a-zA-Z0-9]+)([\.])([a-zA-Z\.]+)/g,
+                  message: "This is not a valid email",
+                },
+              }}
+              errors={errors.Email}
+            />
+            <TextField
+              register={register}
+              onChange={null}
+              type={"password"}
+              label={"Password"}
+              properties={{
+                required: true,
+                minLength: {
+                  value: 8,
+                  message: "Password should have more than 8 characters",
+                },
+              }}
+              errors={errors.Password}
+            />
             <button type="submit" class="signUpButton">
               SIGN IN
             </button>
-            <br></br>
             <p>
-              Forgot Password? <span class="signInButton">Click Here to Reset</span>
+              Forgot Password?{" "}
+              <span class="signInButton">Click Here to Reset</span>
             </p>
             <p>
-              Don't Have an Account? <span class="signInButton"><Link to ="/sign-up">SIGN UP</Link></span>
+              Don't Have an Account?{" "}
+              <span class="signInButton">
+                <Link to="/sign-up">SIGN UP</Link>
+              </span>
             </p>
           </form>
         </div>
         <div className="img-container">
-          <img alt="refresh" className="img"  src={image2} />
+          <img alt="refresh" className="img" src={image2} />
         </div>
       </div>
     </main>
