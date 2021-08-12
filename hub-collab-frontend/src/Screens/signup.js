@@ -23,7 +23,6 @@ function SignUp() {
   const history = useHistory();
   useEffect(() => {
     return () => {
-      console.log(state.visibleButton);
       window.onpopstate = () => setState({...state,visibleButton:false});
       window.history.pushState(null,  document.title, window.location.href)
     };
