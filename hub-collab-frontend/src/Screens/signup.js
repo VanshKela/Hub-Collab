@@ -9,7 +9,7 @@ import {
   Switch,
   useHistory
 } from "react-router-dom";
-import SkillForm from "./skill";
+import SkillForm from "./skillForm";
 
 function SignUp() {
   const [state, setState] = useState({
@@ -23,10 +23,16 @@ function SignUp() {
   const history = useHistory();
   useEffect(() => {
     return () => {
-      window.onpopstate = () => setState({...state,visibleButton:false});
       window.history.pushState(null,  document.title, window.location.href)
     };
   }, [history.action])
+
+  useEffect(() =>{
+    if (window.location.pathname === "/sign-up/techstack") 
+      setState({ ...state, visibleButton: true });
+    else 
+      setState({ ...state, visibleButton: false });
+  },[window.location.pathname])
 
   const fileChangeHandler = (event) => {
     setState({
@@ -77,7 +83,7 @@ function SignUp() {
                 ></Route>
                 <Route
                   exact
-                  path="/sign-up-techstack"
+                  path="/sign-up/techstack"
                   render={() => <SkillForm onClick={techChangeHandler} />}
                 ></Route>
               </Switch>
@@ -88,7 +94,7 @@ function SignUp() {
                 image={state.selectedFile}
                 tech={state.tech}
               />
-              {state.visibleButton ? (
+              { state.visibleButton ? (
                 <button
                   type="submit"
                   onClick={(event) => (window.location.href = "/")}

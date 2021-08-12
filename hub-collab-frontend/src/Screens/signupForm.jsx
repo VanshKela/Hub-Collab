@@ -32,7 +32,7 @@ function SignUpForm({ onChangeName, onChangeFile, onClickButton }) {
       <br></br>
       <Route
         render={({ history }) => (
-          <button type="button" class="signUpButton" onClick={() => { history.push('sign-up-techstack'); onClickButton()}}>
+          <button type="button" class="signUpButton" onClick={() => { history.push('sign-up/techstack'); onClickButton()}}>
             SIGN UP
           </button>
         )}
