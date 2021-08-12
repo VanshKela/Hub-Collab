@@ -2,7 +2,12 @@ import "./signup.css";
 import image2 from "./../assets/image2.png";
 import TextField from "./../components/TextField.js";
 import {Link} from "react-router-dom";
+import React from "react";
+import { useForm } from "react-hook-form";
+
 function LogIn() {
+  const { register, handleSubmit, watch, formState: { errors } } = useForm();
+  const onSubmit = data => console.log(data);
   return (
     <main>
       <div className="container">
@@ -10,15 +15,14 @@ function LogIn() {
           <header>
             <h1>HubCollab</h1>
           </header>
-          <article className="form">
+          <form className="form" onSubmit={handleSubmit(onSubmit)}>
             <h2>Sign In</h2>
-            
-            <TextField onChange={null} type={"text"} property={"Email"} />
+            <TextField register={register} onChange={null} type={"text"} label={"Email"} />
             <br></br>
-            <TextField onChange={null} type={"password"} property={"Password"} />
+            <TextField register={register} onChange={null} type={"password"} label={"Password"} />
             <br></br><br></br>
             
-            <button type="button" class="signUpButton">
+            <button type="submit" class="signUpButton">
               SIGN IN
             </button>
             <br></br>
@@ -28,7 +32,7 @@ function LogIn() {
             <p>
               Don't Have an Account? <span class="signInButton"><Link to ="/sign-up">SIGN UP</Link></span>
             </p>
-          </article>
+          </form>
         </div>
         <div className="img-container">
           <img alt="refresh" className="img"  src={image2} />

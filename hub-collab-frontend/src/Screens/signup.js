@@ -19,7 +19,7 @@ function SignUp() {
     tech: [],
     visibleButton: false,
   });
-  
+
   const history = useHistory();
   useEffect(() => {
     return () => {
@@ -59,7 +59,6 @@ function SignUp() {
   };
 
   return (
-    <>
       <Router>
         <main>
           <div className="container">
@@ -105,7 +104,6 @@ function SignUp() {
           </div>
         </main>
       </Router>
-    </>
   );
 }
 

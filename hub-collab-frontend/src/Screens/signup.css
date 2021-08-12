@@ -15,9 +15,13 @@
     color: white;
     font-family: Questrial;
     font-size: 25px;
-    background-color: #5138ee;
+    background-color: #6750f8;
     border: none;
     cursor: pointer;
+}
+
+.continue {
+    background-color: darkblue;
 }
 
 label {
