@@ -6,7 +6,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 
 function LogIn() {
-  const { register, handleSubmit, watch, formState: { errors } } = useForm();
+  const { register, handleSubmit, formState: { errors } } = useForm({criteriaMode: "all"});
   const onSubmit = data => console.log(data);
   return (
     <main>
@@ -18,14 +18,10 @@ function LogIn() {
           <form className="form" onSubmit={handleSubmit(onSubmit)}>
             <h2>Sign In</h2>
             <TextField register={register} onChange={null} type={"text"} label={"Email"} />
-            <br></br>
             <TextField register={register} onChange={null} type={"password"} label={"Password"} />
-            <br></br><br></br>
-            
             <button type="submit" class="signUpButton">
               SIGN IN
             </button>
-            <br></br>
             <p>
               Forgot Password? <span class="signInButton">Click Here to Reset</span>
             </p>

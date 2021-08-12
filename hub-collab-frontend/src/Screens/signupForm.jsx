@@ -15,21 +15,18 @@ function SignUpForm({ onChangeName, onChangeFile, onClickButton }) {
         type={"text"}
         label={"Name"}
       />
-      <br></br>
       <TextField
         register={register}
         onChange={null}
         type={"text"}
         label={"Email"}
       />
-      <br></br>
       <TextField
         register={register}
         onChange={null}
         type={"password"}
         label={"Password"}
       />
-      <br></br>
       <div>
         <h3> Upload Profile Picture </h3>
 
