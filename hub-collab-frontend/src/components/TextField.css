@@ -14,9 +14,12 @@ h3 {
     border: 1px solid rgba(0, 0, 0, 0.32);
     box-sizing: border-box;
     border-radius: 30px;
-    margin-bottom: 4vh;
 }
 
 input:focus {
     outline: none;
+}
+
+.textfield {
+    margin-bottom: 4vh;
 }
