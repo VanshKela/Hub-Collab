@@ -9,7 +9,7 @@ function LogIn() {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors , isSubmitSuccessful},
   } = useForm({ criteriaMode: "all" });
   const onSubmit = (data) => console.log(data);
   return (
@@ -31,7 +31,7 @@ function LogIn() {
               onChange={null}
               errors={errors}
             />
-            <button type="submit" class="signUpButton">
+            <button type="submit" class="signUpButton" onClick={console.log(isSubmitSuccessful)}>
               SIGN IN
             </button>
             <p>

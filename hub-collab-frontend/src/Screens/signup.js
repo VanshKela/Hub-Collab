@@ -10,7 +10,7 @@ function SignUp() {
   const {
     handleSubmit,
     register,
-    formState: { errors },
+    formState: { errors, isSubmitSuccessful },
   } = useForm({ criteriaMode: "all" });
   const onSubmit = (data) => {
     console.log(data);
@@ -21,7 +21,6 @@ function SignUp() {
     name: "User Name",
     email: "email@email.com",
     tech: [],
-    visibleButton: false,
   });
 
   const fileChangeHandler = (event) => {
@@ -29,9 +28,6 @@ function SignUp() {
       ...state,
       selectedFile: URL.createObjectURL(event.target.files[0]),
     });
-  };
-  const registerButtonHandler = (event) => {
-    setState({ ...state, visibleButton: true });
   };
   const nameChangeHandler = (event) => {
     setState({ ...state, name: event.target.value });
@@ -57,7 +53,7 @@ function SignUp() {
           <h1 className="headerName">HubCollab</h1>
         </header>
         <form className="form" onSubmit={handleSubmit(onSubmit)}>
-          {!state.visibleButton && (
+          {!isSubmitSuccessful && (
             <div>
               <SignUpForm
                 onChangeName={nameChangeHandler}
@@ -68,9 +64,6 @@ function SignUp() {
               <button
                 type="submit"
                 className="signUpButton continue"
-                // onClick={() => {
-                //   registerButtonHandler();
-                // }}
               >
                 Continue
               </button>
@@ -91,14 +84,14 @@ function SignUp() {
               </p>
             </div>
           )}
-          {state.visibleButton && <SkillForm onClick={techChangeHandler} />}
+          {isSubmitSuccessful && <SkillForm onClick={techChangeHandler} />}
           <div className="cardContainer">
             <Card
               name={state.name}
               image={state.selectedFile}
               tech={state.tech}
             />
-            {state.visibleButton && (
+            {isSubmitSuccessful && (
               <button
                 type="submit"
                 onClick={(event) => (window.location.href = "/")}
