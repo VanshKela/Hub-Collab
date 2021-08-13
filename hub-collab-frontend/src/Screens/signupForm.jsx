@@ -1,31 +1,26 @@
-import TextField from "../components/TextField.js";
+import {NameTextField, PasswordTextField, EmailTextField} from "../components/TextField.js";
 import React from "react";
 import "./signup.css";
 import uploadButton from "./../assets/uploadButton.png";
-import { useForm } from "react-hook-form";
 
-function SignUpForm({ onChangeName, onChangeFile, onClickButton }) {
-  const { register } = useForm({ mode: "onChange" });
+function SignUpForm({register, onChangeName, onChangeFile, errors}) {
   return (
     <React.Fragment>
       <h2>Sign Up</h2>
-      <TextField
+      <NameTextField
         register={register}
         onChange={onChangeName}
-        type={"text"}
-        label={"Name"}
+        errors={errors}
       />
-      <TextField
+      <EmailTextField
         register={register}
         onChange={null}
-        type={"text"}
-        label={"Email"}
+        errors={errors}
       />
-      <TextField
+      <PasswordTextField
         register={register}
         onChange={null}
-        type={"password"}
-        label={"Password"}
+        errors={errors}
       />
       <div>
         <h3> Upload Profile Picture </h3>
