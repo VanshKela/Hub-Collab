@@ -1,6 +1,6 @@
 import "./signup.css";
 import image2 from "./../assets/image2.png";
-import TextField from "./../components/TextField.js";
+import {EmailTextField, PasswordTextField}  from "./../components/TextField.js";
 import { Link } from "react-router-dom";
 import React from "react";
 import { useForm } from "react-hook-form";
@@ -21,33 +21,15 @@ function LogIn() {
           </header>
           <form className="form" onSubmit={handleSubmit(onSubmit)}>
             <h2>Sign In</h2>
-            <TextField
+            <EmailTextField
               register={register}
               onChange={null}
-              type={"text"}
-              label={"Email"}
-              properties={{
-                required: "Email is required.",
-                pattern: {
-                  value: /([a-zA-Z0-9]+)([\_\.\-{1}])?([a-zA-Z0-9]+)\@([a-zA-Z0-9]+)([\.])([a-zA-Z\.]+)/g,
-                  message: "This is not a valid email",
-                },
-              }}
-              errors={errors.Email}
+              errors={errors}
             />
-            <TextField
+            <PasswordTextField
               register={register}
               onChange={null}
-              type={"password"}
-              label={"Password"}
-              properties={{
-                required: true,
-                minLength: {
-                  value: 8,
-                  message: "Password should have more than 8 characters",
-                },
-              }}
-              errors={errors.Password}
+              errors={errors}
             />
             <button type="submit" class="signUpButton">
               SIGN IN

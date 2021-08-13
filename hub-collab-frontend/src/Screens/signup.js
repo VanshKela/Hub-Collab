@@ -8,11 +8,14 @@ import { useForm } from "react-hook-form";
 
 function SignUp() {
   const {
-    handleSubmit
+    handleSubmit,
+    register,
+    formState: { errors },
   } = useForm({ criteriaMode: "all" });
   const onSubmit = (data) => {
     console.log(data);
   };
+
   const [state, setState] = useState({
     selectedFile: user,
     name: "User Name",
@@ -59,14 +62,15 @@ function SignUp() {
               <SignUpForm
                 onChangeName={nameChangeHandler}
                 onChangeFile={fileChangeHandler}
-                onClickButton={registerButtonHandler}
+                errors={errors}
+                register={register}
               />
               <button
-                type="button"
+                type="submit"
                 className="signUpButton continue"
-                onClick={() => {
-                  registerButtonHandler();
-                }}
+                // onClick={() => {
+                //   registerButtonHandler();
+                // }}
               >
                 Continue
               </button>
