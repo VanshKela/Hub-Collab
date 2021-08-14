@@ -18,7 +18,8 @@ exports.signUp = catchAsync(async(req, res, next) => {
         image: {
             data: fs.readFileSync(path.join(__dirname + "./../uploads/" + req.file.filename)),
             contentType: ["image/jpeg", "image/png"]
-        }
+        },
+        skills: req.body.skills
     });
 
     const token = signToken(newUser._id)
