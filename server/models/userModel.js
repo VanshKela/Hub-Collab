@@ -14,12 +14,17 @@ userSchema = new mongoose.Schema({
         validator: [validator.isEmail, 'Please provide a valid email'],
         lowercase: true
     },
-    photo: String,
+    image: {
+        data: Buffer,
+        contentType: [String]
+    },
     password: {
         type: String,
         required: [true, 'Please provide password'],
-        minLength: [8, 'Password should have minimum 8 letters']
+        minLength: [8, 'Password should have minimum 8 letters'],
+        select: false
     },
+    skills: [String],
 });
 
 userSchema.pre('save', async function(next) {
@@ -28,6 +33,20 @@ userSchema.pre('save', async function(next) {
     this.password = await bcrypt.hash(this.password, 12);
     next();
 });
+userSchema.path('skills').validate(function(value) {
+    console.log(value.length)
+    if (value.length <= 2) {
+        throw new Error("You need to have more than 3 skills");
+    }
+});
+
+
+userSchema.methods.correctPassword = async function(
+    candidatePassword,
+    userPassword
+) {
+    return await bcrypt.compare(candidatePassword, userPassword);
+};
 
 const User = mongoose.model('User', userSchema);
 
