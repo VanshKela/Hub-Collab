@@ -70,7 +70,7 @@ function SignUp() {
               <br></br>
               <p>
                 Already have an account?
-                <span class="signInButton">
+                <span className="signInButton">
                   <button
                     id="back-btn"
                     hidden
