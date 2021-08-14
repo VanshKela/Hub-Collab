@@ -1,6 +1,8 @@
 const User = require('./../models/userModel');
 const catchAsync = require('./../utils/catchAsync');
 const jwt = require("jsonwebtoken");
+var fs = require('fs');
+var path = require('path');
 
 const signToken = id => {
     return jwt.sign({ id }, process.env.JWT_SECRET, {
@@ -12,7 +14,11 @@ exports.signUp = catchAsync(async(req, res, next) => {
     const newUser = await User.create({
         email: req.body.email,
         password: req.body.password,
-        name: req.body.name
+        name: req.body.name,
+        image: {
+            data: fs.readFileSync(path.join(__dirname + "./../uploads/" + req.file.filename)),
+            contentType: ["image/jpeg", "image/png"]
+        }
     });
 
     const token = signToken(newUser._id)

@@ -14,7 +14,10 @@ userSchema = new mongoose.Schema({
         validator: [validator.isEmail, 'Please provide a valid email'],
         lowercase: true
     },
-    photo: String,
+    image: {
+        data: Buffer,
+        contentType: [String]
+    },
     password: {
         type: String,
         required: [true, 'Please provide password'],
