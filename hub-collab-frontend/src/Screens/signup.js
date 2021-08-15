@@ -30,7 +30,8 @@ function SignUp() {
     });
   };
   const nameChangeHandler = (event) => {
-    setState({ ...state, name: event.target.value });
+    if (event.target.value.length < 19)
+      setState({ ...state, name: event.target.value });
   };
   const techChangeHandler = (e) => {
     if (!state.tech.includes(e.target.value)) {
@@ -61,10 +62,7 @@ function SignUp() {
                 errors={errors}
                 register={register}
               />
-              <button
-                type="submit"
-                className="signUpButton continue"
-              >
+              <button type="submit" className="signUpButton continue">
                 Continue
               </button>
               <br></br>
