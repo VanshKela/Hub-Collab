@@ -17,6 +17,7 @@ function SignUp() {
   };
 
   const [state, setState] = useState({
+    image: user,
     selectedFile: user,
     name: "User Name",
     email: "email@email.com",
@@ -26,6 +27,7 @@ function SignUp() {
   const fileChangeHandler = (event) => {
     setState({
       ...state,
+      image: event.target.files[0],
       selectedFile: URL.createObjectURL(event.target.files[0]),
     });
   };
@@ -62,13 +64,17 @@ function SignUp() {
                 errors={errors}
                 register={register}
               />
-              <button type="submit" className="signUpButton continue">
+              <button
+                type="submit"
+                className="signUpButton continue"
+                onClick={console.log(state.image)}
+              >
                 Continue
               </button>
               <br></br>
               <p>
                 Already have an account?
-                <span class="signInButton">
+                <span className="signInButton">
                   <button
                     id="back-btn"
                     hidden
