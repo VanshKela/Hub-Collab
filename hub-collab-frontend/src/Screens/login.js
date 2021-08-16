@@ -20,19 +20,21 @@ function LogIn() {
             <h1>HubCollab</h1>
           </header>
           <form className="form" onSubmit={handleSubmit(onSubmit)}>
-            <h2>Sign In</h2>
-            <EmailTextField
-              register={register}
-              onChange={null}
-              errors={errors}
-            />
-            <PasswordTextField
-              register={register}
-              onChange={null}
-              errors={errors}
-            />
+            <div className="signin">
+              <h2>Sign In</h2>
+              <EmailTextField
+                register={register}
+                onChange={null}
+                errors={errors}
+              />
+              <PasswordTextField
+                register={register}
+                onChange={null}
+                errors={errors}
+              />
+            </div>
             <button type="submit" className="signUpButton" onClick={console.log(isSubmitSuccessful)}>
-              SIGN IN
+              Sign In
             </button>
             <p>
               Forgot Password?{" "}
