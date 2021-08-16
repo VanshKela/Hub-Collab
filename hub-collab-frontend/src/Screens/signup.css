@@ -1,5 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Questrial&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    font-size: 100%;
+    margin: 0;
+}
+
 .container {
     margin: 0;
     padding: 0;
@@ -9,15 +17,21 @@
 
 .signUpButton {
     text-align: center;
-    width: 55%;
+    width: 19rem;
     border-radius: 40px;
-    height: 40px;
+    height: 2.5rem;
     color: white;
     font-family: Questrial;
-    font-size: 25px;
+    font-size: 1.5em;
     background-color: #6750f8;
     border: none;
     cursor: pointer;
+    margin-top: 3vh;
+}
+
+.signUpButton:hover{
+    background-color: #361be4;
+    transition: 250ms ease-in-out;
 }
 
 .continue {
@@ -39,10 +53,12 @@ label {
 }
 
 .form-container {
-    width: 100vh;
+    width: 50vw;
     margin-bottom: 0;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background: #fffefe;
     padding-left: 5%;
     padding-right: 5%;
@@ -53,8 +69,7 @@ h1 {
     font-family: Bebas Neue;
     font-style: normal;
     font-weight: normal;
-    font-size: 72px;
-    line-height: 50px;
+    font-size: 4.5rem;
     text-align: center;
     color: #000000;
 }
@@ -65,6 +80,11 @@ input {
     font-size: 16px;
 }
 
+.signin{
+    display: flex;
+    flex-direction: column;
+}
+
 h2 {
     font-family: Questrial;
     font-style: normal;
@@ -72,28 +92,30 @@ h2 {
     font-size: 30px;
     line-height: 38px;
     color: #000000;
+    margin: 7vh 0 5vh 0;
 }
 
 p {
     font-family: Questrial;
     font-style: normal;
     font-weight: normal;
-    font-size: 14px;
-    line-height: 15px;
+    font-size: 0.9em;
     color: #000000;
+    margin: 1.5vh 0;
 }
 
 .img-container {
-    height: 100%;
-    display: block;
+    width: 50vw;
+    height: 100vh;
 }
 
 .img {
     float: right;
     max-height: 100vh;
-    max-width: 100vh;
+    width: 50vw;
     display: block;
     height: 100%;
+    object-fit: cover;
 }
 
 .small-image {
@@ -156,9 +178,11 @@ p {
 }
 
 .form {
-    position: relative;
     margin-right: 5%;
-    width: 50vw;
+    width: 45vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .skills-container {
@@ -168,7 +192,7 @@ p {
 }
 
 header {
-    width: 50vw;
+    width: 45vw;
 }
 
 h3 {
@@ -176,8 +200,8 @@ h3 {
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
-    line-height: 5px;
     color: #000000;
+    margin: 2vh 0;
 }
 
 .rounded-input {
@@ -195,4 +219,20 @@ input:focus {
 
 .textfield {
     margin-bottom: 4vh;
+}
+
+@media screen and (max-width: 1024px){
+    .container{
+    grid-template-columns: 100%;
+    }
+    .form-container {
+        width: 100vw;
+        height: 100vh;
+    }
+    .img-container {
+        display: none;
+    }
+    header{
+        width: 100vw;
+    }
 }
