@@ -17,6 +17,7 @@ function SignUp() {
   };
 
   const [state, setState] = useState({
+    image: user,
     selectedFile: user,
     name: "User Name",
     email: "email@email.com",
@@ -26,11 +27,13 @@ function SignUp() {
   const fileChangeHandler = (event) => {
     setState({
       ...state,
+      image: event.target.files[0],
       selectedFile: URL.createObjectURL(event.target.files[0]),
     });
   };
   const nameChangeHandler = (event) => {
-    setState({ ...state, name: event.target.value });
+    if (event.target.value.length < 19)
+      setState({ ...state, name: event.target.value });
   };
   const techChangeHandler = (e) => {
     if (!state.tech.includes(e.target.value)) {
@@ -64,13 +67,14 @@ function SignUp() {
               <button
                 type="submit"
                 className="signUpButton continue"
+                onClick={console.log(state.image)}
               >
                 Continue
               </button>
               <br></br>
               <p>
                 Already have an account?
-                <span class="signInButton">
+                <span className="signInButton">
                   <button
                     id="back-btn"
                     hidden

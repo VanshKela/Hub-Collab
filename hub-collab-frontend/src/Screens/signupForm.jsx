@@ -33,7 +33,7 @@ function SignUpForm({register, onChangeName, onChangeFile, errors}) {
           hidden
         />
         <label htmlFor="inputImage">
-          <img alt="Upload" src={uploadButton} class="uploadButton"></img>
+          <img alt="Upload" src={uploadButton} className="uploadButton"></img>
         </label>
       </div>
       <br></br>

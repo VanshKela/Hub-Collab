@@ -33,16 +33,16 @@ function LogIn() {
                 errors={errors}
               />
             </div>
-            <button type="submit" class="signUpButton" onClick={console.log(isSubmitSuccessful)}>
+            <button type="submit" className="signUpButton" onClick={console.log(isSubmitSuccessful)}>
               Sign In
             </button>
             <p>
               Forgot Password?{" "}
-              <span class="signInButton">Click Here to Reset</span>
+              <span className="signInButton">Click Here to Reset</span>
             </p>
             <p>
               Don't Have an Account?{" "}
-              <span class="signInButton">
+              <span className="signInButton">
                 <Link to="/sign-up">SIGN UP</Link>
               </span>
             </p>
