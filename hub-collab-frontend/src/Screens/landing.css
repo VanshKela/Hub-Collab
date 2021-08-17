@@ -1,0 +1,8 @@
+.LandingContainer {
+    display: flex;
+}
+
+.ProjectCardContainer {
+    border: 1px solid;
+    width: 80%;
+}

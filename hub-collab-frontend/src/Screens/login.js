@@ -1,17 +1,25 @@
 import "./signup.css";
 import image2 from "./../assets/image2.png";
-import {EmailTextField, PasswordTextField}  from "./../components/TextField.js";
-import { Link } from "react-router-dom";
-import React from "react";
+import {
+  EmailTextField,
+  PasswordTextField,
+} from "./../components/TextField.js";
+import { Link, useHistory } from "react-router-dom";
+import React, {useEffect} from "react";
 import { useForm } from "react-hook-form";
 
 function LogIn() {
+  const history = useHistory();
   const {
     register,
     handleSubmit,
-    formState: { errors , isSubmitSuccessful},
+    formState: { errors, isSubmitSuccessful },
   } = useForm({ criteriaMode: "all" });
   const onSubmit = (data) => console.log(data);
+  useEffect(() => {
+    if (isSubmitSuccessful)
+      history.push('/landing')
+  }, [isSubmitSuccessful])
   return (
     <main>
       <div className="container">
@@ -33,7 +41,13 @@ function LogIn() {
                 errors={errors}
               />
             </div>
-            <button type="submit" className="signUpButton" onClick={console.log(isSubmitSuccessful)}>
+            <button
+              type="submit"
+              className="signUpButton"
+              onClick={() => {
+                console.log(isSubmitSuccessful);
+              }}
+            >
               Sign In
             </button>
             <p>
