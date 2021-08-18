@@ -10,11 +10,8 @@ function SignUp() {
   const {
     handleSubmit,
     register,
-    formState: { errors, isSubmitSuccessful },
-  } = useForm({ criteriaMode: "all" });
-  const onSubmit = (data) => {
-    console.log(data);
-  };
+    formState: { errors, isValid },
+  } = useForm({ criteriaMode: "all", mode: "onBlur" });
 
   const [state, setState] = useState({
     image: user,
@@ -22,7 +19,29 @@ function SignUp() {
     name: "User Name",
     email: "email@email.com",
     tech: [],
+    formVisible: true,
   });
+
+  const onSubmit = (data) => {
+    fetch("/api/v1/users/signup", {
+      method: "post",
+      headers: {
+        Accept: "application/json, text/plain, */*",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email: data.Email,
+        password: data.Password,
+        name: data.Name,
+        skills: state.tech,
+        image: state.image,
+      }),
+    })
+      .then((res) => res.json())
+      .then((res) => {
+        window.location.href = "/";
+      });
+  };
 
   const fileChangeHandler = (event) => {
     setState({
@@ -56,7 +75,7 @@ function SignUp() {
           <h1 className="headerName">HubCollab</h1>
         </header>
         <form className="form" onSubmit={handleSubmit(onSubmit)}>
-          {!isSubmitSuccessful && (
+          {state.formVisible && (
             <div>
               <SignUpForm
                 onChangeName={nameChangeHandler}
@@ -65,9 +84,15 @@ function SignUp() {
                 register={register}
               />
               <button
-                type="submit"
+                type="button"
                 className="signUpButton continue"
-                onClick={console.log(state.image)}
+                onClick={() => {
+                  if (isValid)
+                    setState({
+                      ...state,
+                      formVisible: false,
+                    });
+                }}
               >
                 Continue
               </button>
@@ -88,17 +113,16 @@ function SignUp() {
               </p>
             </div>
           )}
-          {isSubmitSuccessful && <SkillForm onClick={techChangeHandler} />}
+          {!state.formVisible && <SkillForm onClick={techChangeHandler} />}
           <div className="cardContainer">
             <Card
               name={state.name}
               image={state.selectedFile}
               tech={state.tech}
             />
-            {isSubmitSuccessful && (
+            {!state.formVisible && (
               <button
                 type="submit"
-                onClick={(event) => (window.location.href = "/")}
                 className="registerButton"
               >
                 Register

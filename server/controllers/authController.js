@@ -15,10 +15,7 @@ exports.signUp = catchAsync(async(req, res, next) => {
         email: req.body.email,
         password: req.body.password,
         name: req.body.name,
-        image: {
-            data: fs.readFileSync(path.join(__dirname + "./../uploads/" + req.file.filename)),
-            contentType: ["image/jpeg", "image/png"]
-        },
+        image: req.file,
         skills: req.body.skills
     });
 
