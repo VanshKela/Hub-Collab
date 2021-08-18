@@ -5,7 +5,7 @@ import {
   PasswordTextField,
 } from "./../components/TextField.js";
 import { Link, useHistory } from "react-router-dom";
-import React, {useEffect} from "react";
+import React from "react";
 import { useForm } from "react-hook-form";
 
 function LogIn() {
@@ -13,13 +13,25 @@ function LogIn() {
   const {
     register,
     handleSubmit,
-    formState: { errors, isSubmitSuccessful },
+    formState: { errors },
   } = useForm({ criteriaMode: "all" });
-  const onSubmit = (data) => console.log(data);
-  useEffect(() => {
-    if (isSubmitSuccessful)
-      history.push('/landing')
-  }, [isSubmitSuccessful])
+  const onSubmit = (data) => {
+    fetch("/api/v1/users/login", {
+      method: "post",
+      headers: {
+        Accept: "application/json, text/plain, */*",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email: data.Email,
+        password: data.Password,
+      }),
+    })
+      .then((res) => res.json())
+      .then((res) => {
+        if (res.status === "success") history.push("/landing");
+      });
+  };
   return (
     <main>
       <div className="container">
@@ -41,13 +53,7 @@ function LogIn() {
                 errors={errors}
               />
             </div>
-            <button
-              type="submit"
-              className="signUpButton"
-              onClick={() => {
-                console.log(isSubmitSuccessful);
-              }}
-            >
+            <button type="submit" className="signUpButton">
               Sign In
             </button>
             <p>
