@@ -58,3 +58,34 @@
   font-weight: normal;
   font-size: 1.2em;
 }
+
+.trendImage {
+  width: 2.5rem;
+  margin-left: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.userAvatar {
+  border-radius: 0.3rem;
+  margin: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+  width: 85%;
+  background-color: white;
+}
+
+.projectNameUser {
+  font-family: "Red Hat Display", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.3rem;
+  margin-right: 0.5rem;
+}
+
+.userNameUser {
+  margin-right: 0.5rem;
+  font-family: "Red Hat Display", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1rem;
+}

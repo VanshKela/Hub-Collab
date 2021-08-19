@@ -35,8 +35,37 @@ function Landing() {
         <div className="TopProjectsContainer">
           <h1 className="topProjectHeader">Top Projects</h1>
           <h6 className="trendHeader">Trending this week</h6>
-          <TrendCard></TrendCard>
-          <h6 className="trendHeader">Top charts</h6> <TrendCard></TrendCard>
+          <TrendCard
+            trendImage={vansh}
+            projectName="HUB COLLAB"
+            userName="Username@1"
+          ></TrendCard>
+          <TrendCard
+            trendImage={vansh}
+            projectName="HUB COLLAB"
+            userName="Username@1"
+          ></TrendCard>
+          <TrendCard
+            trendImage={vansh}
+            projectName="HUB COLLAB"
+            userName="Username@1"
+          ></TrendCard>
+          <h6 className="trendHeader">Top charts</h6>
+          <TrendCard
+            trendImage={vansh}
+            projectName="HUB COLLAB"
+            userName="Username@1"
+          ></TrendCard>
+          <TrendCard
+            trendImage={vansh}
+            projectName="HUB COLLAB"
+            userName="Username@1"
+          ></TrendCard>
+          <TrendCard
+            trendImage={vansh}
+            projectName="HUB COLLAB"
+            userName="Username@1"
+          ></TrendCard>
         </div>
       </div>
     </React.Fragment>

@@ -29,12 +29,16 @@ export const ProjectCard = ({
   );
 };
 
-export const TrendCard = ({}) => {
+export const TrendCard = ({ trendImage, projectName, userName }) => {
   return (
-    <div>
-      <p>HELLO</p>
-      <p>HELLO</p>
-      <p>HELLO</p>
+    <div className="userAvatar">
+      <div>
+        <img className="trendImage" src={trendImage} alt="userAvatar"></img>
+      </div>
+      <div className="userData">
+        <h3 className="projectNameUser">{projectName}</h3>
+        <h3 className="userNameUser">{userName}</h3>
+      </div>
     </div>
   );
 };
