@@ -3,13 +3,13 @@ import "./TextField.css";
 export const EmailTextField = ({ onChange, register, errors }) => {
   return (
     <div className="textfield">
-      <h3> Email </h3>
+      <h3 className="textFieldh3"> Email </h3>
       <input
         {...register("Email", {
           required: "Email is required.",
           pattern: {
             value:
-            /([a-zA-Z0-9]+)([_.\-{1}])?([a-zA-Z0-9]+)@([a-zA-Z0-9]+)([.])([a-zA-Z.]+)/g,
+              /([a-zA-Z0-9]+)([_.\-{1}])?([a-zA-Z0-9]+)@([a-zA-Z0-9]+)([.])([a-zA-Z.]+)/g,
             message: "This is not a valid email",
           },
         })}
@@ -59,4 +59,3 @@ export const NameTextField = ({ onChange, register, errors }) => {
     </div>
   );
 };
-

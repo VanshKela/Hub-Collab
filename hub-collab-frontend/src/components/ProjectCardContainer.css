@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@1,400;1,500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.projectsCard {
+  border-radius: 1rem;
+  display: flex;
+  margin: 1rem;
+}
+
+.projectContentContainer {
+  width: 60%;
+  padding-left: 0.5em;
+}
+.projectImageContainer {
+  width: 40%;
+}
+.projectImage {
+  border-radius: 1rem;
+  width: 100%;
+  flex-shrink: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+}
+.projectName {
+  font-size: 4rem;
+  text-align: left;
+  display: inline;
+}
+.userName {
+  display: inline;
+  font-family: Questrial;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.4rem;
+  float: right;
+  margin-top: 1rem;
+  margin-right: 1rem;
+  font-weight: 600;
+}
+
+.langName {
+  font-family: Questrial;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.projectDescription {
+  margin-top: 2rem;
+  font-family: "Red Hat Display", sans-serif;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 1.2em;
+}

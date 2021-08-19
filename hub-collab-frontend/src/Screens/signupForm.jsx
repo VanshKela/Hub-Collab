@@ -1,9 +1,13 @@
-import {NameTextField, PasswordTextField, EmailTextField} from "../components/TextField.js";
+import {
+  NameTextField,
+  PasswordTextField,
+  EmailTextField,
+} from "../components/TextField.js";
 import React from "react";
 import "./signup.css";
 import uploadButton from "./../assets/uploadButton.png";
 
-function SignUpForm({register, onChangeName, onChangeFile, errors}) {
+function SignUpForm({ register, onChangeName, onChangeFile, errors }) {
   return (
     <React.Fragment>
       <h2>Sign Up</h2>
@@ -12,17 +16,9 @@ function SignUpForm({register, onChangeName, onChangeFile, errors}) {
         onChange={onChangeName}
         errors={errors}
       />
-      <EmailTextField
-        register={register}
-        onChange={null}
-        errors={errors}
-      />
-      <PasswordTextField
-        register={register}
-        onChange={null}
-        errors={errors}
-      />
-      <div>
+      <EmailTextField register={register} onChange={null} errors={errors} />
+      <PasswordTextField register={register} onChange={null} errors={errors} />
+      <div className="upload">
         <h3> Upload Profile Picture </h3>
 
         <input

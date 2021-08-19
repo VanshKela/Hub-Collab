@@ -1,29 +1,28 @@
-h3 {
-    font-family: Questrial;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 5px;
-    color: #000000;
+.textfield h3 {
+  font-family: Questrial;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  color: #000000;
 }
 
 .rounded-input {
-    width: 324px;
-    height: 40px;
-    background: rgba(255, 255, 255, 0.29);
-    border: 1px solid rgba(0, 0, 0, 0.32);
-    box-sizing: border-box;
-    border-radius: 30px;
+  width: 324px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.29);
+  border: 1px solid rgba(0, 0, 0, 0.32);
+  box-sizing: border-box;
+  border-radius: 30px;
 }
 
 input:focus {
-    outline: none;
+  outline: none;
 }
 
 .textfield {
-    margin-bottom: 4vh;
+  margin-bottom: 4vh;
 }
 
 .error {
-    color: red;
+  color: red;
 }

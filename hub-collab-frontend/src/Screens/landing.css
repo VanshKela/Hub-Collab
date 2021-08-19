@@ -1,8 +1,28 @@
 .LandingContainer {
-    display: flex;
+  display: flex;
 }
 
 .ProjectCardContainer {
-    border: 1px solid;
-    width: 80%;
+  width: 80%;
+}
+.hamburgerImage {
+  width: 2rem;
+}
+
+.hubImage {
+  width: 12rem;
+}
+
+.userImage {
+  width: 4rem;
+}
+
+.appbar {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem;
+}
+
+.topProjectHeader {
 }
