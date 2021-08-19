@@ -2,7 +2,7 @@ import React from "react";
 import "./ProjectCardContainer.css";
 import { usePalette } from "react-palette";
 
-const ProjectCardContainer = ({
+export const ProjectCard = ({
   projectImage,
   projectName,
   langName,
@@ -29,4 +29,12 @@ const ProjectCardContainer = ({
   );
 };
 
-export default ProjectCardContainer;
+export const TrendCard = ({}) => {
+  return (
+    <div>
+      <p>HELLO</p>
+      <p>HELLO</p>
+      <p>HELLO</p>
+    </div>
+  );
+};

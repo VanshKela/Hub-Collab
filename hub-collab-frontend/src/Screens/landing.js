@@ -1,6 +1,6 @@
 import "./landing.css";
 import React from "react";
-import ProjectCardContainer from "./../components/ProjectCardContainer";
+import { ProjectCard, TrendCard } from "./../components/ProjectCardContainer";
 import vansh from "./../assets/vanshCircle.png";
 import burger from "./../assets/hamburger.jpg";
 import hubpic from "./../assets/hubpic.png";
@@ -17,14 +17,14 @@ function Landing() {
       </div>
       <div className="LandingContainer">
         <div className="ProjectCardContainer">
-          <ProjectCardContainer
+          <ProjectCard
             projectImage={paris}
             projectName="HUB COLLAB"
             userName="Username@1"
             langName="JS, REACT, Express"
             projectDescription="Paris is synonymous with the finest things that culture can offer — in art, fashion, food, literature, and ideas. On this tour, your Paris-savvy Rick Steves guide will immerse you in the very best of Kela."
           />
-          <ProjectCardContainer
+          <ProjectCard
             projectImage={ireland}
             projectName="AADHAR CARD"
             userName="Username@2"
@@ -34,6 +34,9 @@ function Landing() {
         </div>
         <div className="TopProjectsContainer">
           <h1 className="topProjectHeader">Top Projects</h1>
+          <h6 className="trendHeader">Trending this week</h6>
+          <TrendCard></TrendCard>
+          <h6 className="trendHeader">Top charts</h6> <TrendCard></TrendCard>
         </div>
       </div>
     </React.Fragment>

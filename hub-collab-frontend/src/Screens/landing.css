@@ -1,9 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap");
+
 .LandingContainer {
-  display: flex;
+  display: grid;
+  grid-template-columns: 11fr 3fr;
 }
 
 .ProjectCardContainer {
-  width: 80%;
+  width: 100%;
 }
 .hamburgerImage {
   width: 2rem;
@@ -25,4 +28,18 @@
 }
 
 .topProjectHeader {
+  font-family: "Red Hat Display", sans-serif;
+  font-style: normal;
+  font-size: 2rem;
+  text-align: center;
+}
+.TopProjectsContainer {
+  padding-top: 1rem;
+}
+
+.trendHeader {
+  font-family: "Red Hat Display", sans-serif;
+  text-decoration-line: underline;
+  text-align: center;
+  margin-top: 1rem;
 }
