@@ -26,13 +26,12 @@
 }
 
 .cardImage {
-  width: 350px;
-  margin-top: 1em;
+  width: 15rem;
+
   filter: invert(100%);
 }
 
 .userCard {
-  margin-top: -1.5em;
   margin-bottom: 1.5em;
   object-fit: cover;
   height: 150px;
