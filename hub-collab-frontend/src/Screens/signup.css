@@ -1,238 +1,238 @@
 @import url("https://fonts.googleapis.com/css2?family=Questrial&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 
-*{
-    box-sizing: border-box;
-    padding: 0;
-    font-size: 100%;
-    margin: 0;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  font-size: 100%;
+  margin: 0;
 }
 
 .container {
-    margin: 0;
-    padding: 0;
-    display: grid;
-    grid-template-columns: 50% 50%;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 50% 50%;
 }
 
 .signUpButton {
-    text-align: center;
-    width: 19rem;
-    border-radius: 40px;
-    height: 2.5rem;
-    color: white;
-    font-family: Questrial;
-    font-size: 1.5em;
-    background-color: #6750f8;
-    border: none;
-    cursor: pointer;
-    margin-top: 3vh;
+  text-align: center;
+  width: 19rem;
+  border-radius: 40px;
+  height: 2.5rem;
+  color: white;
+  font-family: Questrial;
+  font-size: 1.5em;
+  background-color: #6750f8;
+  border: none;
+  cursor: pointer;
+  margin-top: 3vh;
 }
 
-.signUpButton:hover{
-    background-color: #361be4;
-    transition: 250ms ease-in-out;
+.signUpButton:hover {
+  background-color: #361be4;
+  transition: 250ms ease-in-out;
 }
 
 .continue {
-    background-color: darkblue;
+  background-color: darkblue;
 }
 
 label {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .uploadButton {
-    height: 30px;
-    width: 100px;
-    cursor: pointer;
+  height: 30px;
+  width: 100px;
+  cursor: pointer;
 }
 
 .signInButton {
-    color: #1a5ddf;
+  color: #1a5ddf;
 }
 
 .form-container {
-    width: 50vw;
-    margin-bottom: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: #fffefe;
-    padding-left: 5%;
-    padding-right: 5%;
-    height: 100%;
+  width: 50vw;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #fffefe;
+  padding-left: 5%;
+  padding-right: 5%;
+  height: 100%;
 }
 
 h1 {
-    font-family: Bebas Neue;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 4.5rem;
-    text-align: center;
-    color: #000000;
+  font-family: Bebas Neue;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 4.5rem;
+  text-align: center;
+  color: #000000;
 }
 
 input {
-    font-family: Questrial;
-    padding: 12px 20px;
-    font-size: 16px;
+  font-family: Questrial;
+  padding: 12px 20px;
+  font-size: 16px;
 }
 
-.signin{
-    display: flex;
-    flex-direction: column;
+.signin {
+  display: flex;
+  flex-direction: column;
 }
 
 h2 {
-    font-family: Questrial;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 30px;
-    line-height: 38px;
-    color: #000000;
-    margin: 7vh 0 5vh 0;
+  font-family: Questrial;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 38px;
+  color: #000000;
+  margin: 7vh 0 5vh 0;
 }
 
 p {
-    font-family: Questrial;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 0.9em;
-    color: #000000;
-    margin: 1.5vh 0;
+  font-family: Questrial;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.9em;
+  color: #000000;
+  margin: 1.5vh 0;
 }
 
 .img-container {
-    width: 50vw;
-    height: 100vh;
+  width: 50vw;
+  height: 100vh;
 }
 
 .img {
-    float: right;
-    max-height: 100vh;
-    width: 50vw;
-    display: block;
-    height: 100%;
-    object-fit: cover;
+  float: right;
+  max-height: 100vh;
+  width: 50vw;
+  display: block;
+  height: 100%;
+  object-fit: cover;
 }
 
 .small-image {
-    height: 150px;
-    width: 150px;
+  height: 150px;
+  width: 150px;
 }
 
 .cardContainer {
-    position: fixed;
-    right: 0%;
-    left: 50%;
-    top: 5%;
-    bottom: 0%;
-    height: 100vh;
-    display: flex;
-    width: 50vw;
-    max-width: 50vw;
-    background-size: cover;
-    background-image: url("./../assets/cardBack.png");
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  position: fixed;
+  right: 0%;
+  left: 50%;
+  top: 5%;
+  bottom: 0%;
+  height: 100vh;
+  display: flex;
+  width: 50vw;
+  max-width: 50vw;
+  background-size: cover;
+  background-image: url("./../assets/cardBack.png");
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .buttonSkill {
-    margin: 15px 15px;
-    width: 12vw;
-    height: 12vh;
-    background-color: white;
-    border: 2px solid #050d52;
-    box-sizing: border-box;
-    border-radius: 10px;
-    font-family: 'Nunito', sans-serif;
-    font-size: 1.420vw;
-    text-align: center;
-    color: #050d52;
-    cursor: pointer;
+  margin: 15px 15px;
+  width: 12vw;
+  height: 12vh;
+  background-color: white;
+  border: 2px solid #050d52;
+  box-sizing: border-box;
+  border-radius: 10px;
+  font-family: "Nunito", sans-serif;
+  font-size: 1.42vw;
+  text-align: center;
+  color: #050d52;
+  cursor: pointer;
 }
 
 .registerButton {
-    margin-bottom: 8%;
-    width: 10vw;
-    height: 8vh;
-    background-color: white;
-    border: 2px solid #050d52;
-    box-sizing: border-box;
-    border-radius: 10px;
-    font-family: 'Nunito', sans-serif;
-    font-size: 1.420vw;
-    text-align: center;
-    color: #050d52;
-    cursor: pointer;
+  margin-bottom: 8%;
+  width: 10vw;
+  height: 8vh;
+  background-color: white;
+  border: 2px solid #050d52;
+  box-sizing: border-box;
+  border-radius: 10px;
+  font-family: "Nunito", sans-serif;
+  font-size: 1.42vw;
+  text-align: center;
+  color: #050d52;
+  cursor: pointer;
 }
 
 .buttonSkill:hover {
-    background-color: #050d52;
-    color: white;
-    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.4);
-    transition: 300ms ease-in-out;
+  background-color: #050d52;
+  color: white;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.4);
+  transition: 300ms ease-in-out;
 }
 
 .form {
-    margin-right: 5%;
-    width: 45vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  margin-right: 5%;
+  width: 45vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .skills-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: left;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
 }
 
 header {
-    width: 45vw;
+  width: 45vw;
 }
 
-h3 {
-    font-family: Questrial;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    color: #000000;
-    margin: 2vh 0;
+.upload h3 {
+  font-family: Questrial;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  color: #000000;
+  margin: 2vh 0;
 }
 
 .rounded-input {
-    width: 324px;
-    height: 40px;
-    background: rgba(255, 255, 255, 0.29);
-    border: 1px solid rgba(0, 0, 0, 0.32);
-    box-sizing: border-box;
-    border-radius: 30px;
+  width: 324px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.29);
+  border: 1px solid rgba(0, 0, 0, 0.32);
+  box-sizing: border-box;
+  border-radius: 30px;
 }
 
 input:focus {
-    outline: none;
+  outline: none;
 }
 
 .textfield {
-    margin-bottom: 4vh;
+  margin-bottom: 4vh;
 }
 
-@media screen and (max-width: 1024px){
-    .container{
+@media screen and (max-width: 1024px) {
+  .container {
     grid-template-columns: 100%;
-    }
-    .form-container {
-        width: 100vw;
-        height: 100vh;
-    }
-    .img-container {
-        display: none;
-    }
-    header{
-        width: 100vw;
-    }
+  }
+  .form-container {
+    width: 100vw;
+    height: 100vh;
+  }
+  .img-container {
+    display: none;
+  }
+  header {
+    width: 100vw;
+  }
 }
