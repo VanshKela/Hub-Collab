@@ -8,14 +8,44 @@
   margin: 0;
 }
 
-.container {
+.container2 {
   margin: 0;
   padding: 0;
   display: grid;
   grid-template-columns: 50% 50%;
 }
 
-.signUpButton {
+.form-container2 {
+  width: 50vw;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #fffefe;
+  /* padding-left: 5%;
+  padding-right: 5%; */
+  padding: 3% 5%;
+  height: 100%;
+}
+
+.cardContainer {
+  position: fixed;
+  right: 0%;
+  left: 50%;
+  top: 0%;
+  bottom: 0%;
+  height: 100vh;
+  width: 50vw;
+  max-width: 50vw;
+  background-size: cover;
+  background-image: url("./../assets/cardBack.png");
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.continue {
   text-align: center;
   width: 19rem;
   border-radius: 40px;
@@ -23,18 +53,9 @@
   color: white;
   font-family: Questrial;
   font-size: 1.5em;
-  background-color: #6750f8;
   border: none;
   cursor: pointer;
   margin-top: 3vh;
-}
-
-.signUpButton:hover {
-  background-color: #361be4;
-  transition: 250ms ease-in-out;
-}
-
-.continue {
   background-color: darkblue;
 }
 
@@ -43,26 +64,13 @@ label {
 }
 
 .uploadButton {
-  height: 30px;
-  width: 100px;
+  height: 2rem;
+  width: 6.5rem;
   cursor: pointer;
 }
 
 .signInButton {
   color: #1a5ddf;
-}
-
-.form-container {
-  width: 50vw;
-  margin-bottom: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: #fffefe;
-  padding-left: 5%;
-  padding-right: 5%;
-  height: 100%;
 }
 
 h1 {
@@ -76,80 +84,35 @@ h1 {
 
 input {
   font-family: Questrial;
-  padding: 12px 20px;
-  font-size: 16px;
-}
-
-.signin {
-  display: flex;
-  flex-direction: column;
+  padding: 0.75rem 1.25rem;
+  font-size: 1rem;
 }
 
 h2 {
   font-family: Questrial;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 30px;
-  line-height: 38px;
+  font-size: 2rem;
+  line-height: 2.3rem;
   color: #000000;
   margin: 7vh 0 5vh 0;
 }
 
 p {
   font-family: Questrial;
-  font-style: normal;
-  font-weight: normal;
   font-size: 0.9em;
   color: #000000;
   margin: 1.5vh 0;
 }
 
-.img-container {
-  width: 50vw;
-  height: 100vh;
-}
-
-.img {
-  float: right;
-  max-height: 100vh;
-  width: 50vw;
-  display: block;
-  height: 100%;
-  object-fit: cover;
-}
-
-.small-image {
-  height: 150px;
-  width: 150px;
-}
-
-.cardContainer {
-  position: fixed;
-  right: 0%;
-  left: 50%;
-  top: 5%;
-  bottom: 0%;
-  height: 100vh;
-  display: flex;
-  width: 50vw;
-  max-width: 50vw;
-  background-size: cover;
-  background-image: url("./../assets/cardBack.png");
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .buttonSkill {
   margin: 15px 15px;
-  width: 12vw;
-  height: 12vh;
+  width: 11rem;
+  height: 5rem;
   background-color: white;
   border: 2px solid #050d52;
   box-sizing: border-box;
   border-radius: 10px;
   font-family: "Nunito", sans-serif;
-  font-size: 1.42vw;
+  font-size: 1.4em;
   text-align: center;
   color: #050d52;
   cursor: pointer;
@@ -157,20 +120,15 @@ p {
 
 .registerButton {
   margin-bottom: 8%;
-  width: 10vw;
-  height: 8vh;
-  background-color: white;
-  border: 2px solid #050d52;
-  box-sizing: border-box;
-  border-radius: 10px;
+  width: 15rem;
+  color: white;
   font-family: "Nunito", sans-serif;
-  font-size: 1.42vw;
+  font-size: 1.5em;
   text-align: center;
-  color: #050d52;
   cursor: pointer;
 }
 
-.buttonSkill:hover {
+.buttonSkill:hover,.buttonSkill:active {
   background-color: #050d52;
   color: white;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.4);
@@ -188,7 +146,7 @@ p {
 .skills-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: left;
+  justify-content: center;
 }
 
 header {
@@ -222,17 +180,35 @@ input:focus {
 }
 
 @media screen and (max-width: 1024px) {
-  .container {
+  .container2 {
     grid-template-columns: 100%;
   }
-  .form-container {
-    width: 100vw;
-    height: 100vh;
+  .form-container2 {
+    width: 100%;
   }
-  .img-container {
-    display: none;
+  .cardContainer {
+    background: none;
+    height: auto;
+    width: auto;
+    position:static;
+  }
+  .card {
+    display: none !important;
   }
   header {
     width: 100vw;
+  }
+  .form{
+    width: 90vw !important;
+    margin:0 !important;
+  }
+  .skills-container {
+    width:100vw;
+  }
+  .registerButton{
+    display: block !important;
+  }
+  .buttonSkill{
+    width: 8rem !important;
   }
 }
