@@ -6,16 +6,16 @@
   align-items: center;
   /* flex-wrap: wrap; */
   margin: auto;
-  width: 20vw;
-  height: 70vh;
-  padding: 2em;
+  width: 20rem;
+  height: 33rem;
+  padding: 2rem;
   background: linear-gradient(180.13deg, #0011ac 2.37%, #3794eb 103.13%);
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 25px;
 }
 
 .cardText {
-  font-size: 2em;
+  font-size: 1.8em;
   letter-spacing: 0.2px;
   text-align: center;
   font-family: "Lato", sans-serif;
@@ -23,19 +23,20 @@
   margin: 0.5em;
   display: contents;
   word-break: break-all;
+  font-weight: 300;
 }
 
 .cardImage {
-  width: 15rem;
-
+  width: 10rem;
   filter: invert(100%);
+  margin-bottom: 3%;
 }
 
 .userCard {
-  margin-bottom: 1.5em;
+  margin-bottom: 1em;
   object-fit: cover;
-  height: 150px;
-  width: 150px;
+  height: 7.7rem;
+  width: 7.7rem;
   border-radius: 250px;
 }
 

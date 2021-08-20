@@ -69,8 +69,8 @@ function SignUp() {
   };
 
   return (
-    <div className="container">
-      <div className="form-container">
+    <div className="container2">
+      <div className="form-container2">
         <header>
           <h1 className="headerName">HubCollab</h1>
         </header>
@@ -85,7 +85,7 @@ function SignUp() {
               />
               <button
                 type="button"
-                className="signUpButton continue"
+                className="continue"
                 onClick={() => {
                   if (isValid)
                     setState({
@@ -119,11 +119,12 @@ function SignUp() {
               name={state.name}
               image={state.selectedFile}
               tech={state.tech}
+              className="profileCard"
             />
             {!state.formVisible && (
               <button
                 type="submit"
-                className="registerButton"
+                className="continue registerButton"
               >
                 Register
               </button>
